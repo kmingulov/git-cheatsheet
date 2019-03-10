@@ -1,0 +1,29 @@
+.git-command-column {
+  width: 40%;
+}
+
+/* .git { } */
+
+.git, .git-command {
+  color: #999;
+}
+
+.git-remote {
+  color: #00bc8c;
+}
+
+.git-url {
+  text-decoration: underline;
+}
+
+.git-branch {
+  font-weight: bold;
+}
+
+/* .git-commit { } */
+
+/* .git-ref { } */
+
+.git-file {
+  font-style: italic;
+}

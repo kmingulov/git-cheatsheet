@@ -1,3 +1,5 @@
+@import "./git.css";
+
 .header {
   padding-left: 15px !important;
   padding-right: 15px !important;
@@ -5,30 +7,4 @@
 
 .mainContent {
   padding-top: 20px;
-}
-
-.git-command-column {
-  width: 40%;
-}
-
-/* .git { } */
-
-/* .git-command { } */
-
-/* .git-remote { } */
-
-.git-url {
-  text-decoration: underline;
-}
-
-.git-branch {
-  font-weight: bold;
-}
-
-/* .git-commit { } */
-
-/* .git-ref { } */
-
-.git-file {
-  font-style: italic;
 }

@@ -44,7 +44,9 @@ const renderCommand = (command: Command): ReactElement => {
     <span>
       { renderedCommand }
       <br/>
-      { command.scmBreezeShortcut }
+      <small>
+        { command.scmBreezeShortcut }
+      </small>
     </span>
   );
 };
