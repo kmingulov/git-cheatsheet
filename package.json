@@ -13,11 +13,16 @@
     "react-scripts": "2.1.8",
     "typescript": "3.3.3333"
   },
+  "devDependencies": {
+    "tslint": "^5.13.1",
+    "tslint-react": "^3.6.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tslint 'src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
