@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import { Badge, Table } from 'react-bootstrap';
 
 import { CommandGroup } from '../command/CommandGroup';
 import { CommandTableRow } from './CommandTableRow';
 
 interface CommandGroupTableProps {
-  group: CommandGroup
+  group: CommandGroup;
 }
 
 export class CommandGroupTable extends Component<CommandGroupTableProps> {
-  render() {
+  public render(): ReactElement {
     const { group } = this.props;
 
     return (
@@ -21,9 +21,9 @@ export class CommandGroupTable extends Component<CommandGroupTableProps> {
         </h4>
         <Table striped bordered>
           <tbody>
-            { group.commands.map((command, i) =>
+            { group.commands.map((command, i) => (
               <CommandTableRow command={ command } key={ i }/>
-            )}
+            ))}
           </tbody>
         </Table>
       </div>

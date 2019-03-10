@@ -8,7 +8,7 @@ enum CommandPartType {
   COMMIT = 'COMMIT',
   REF = 'REF',
 
-  FILE = 'FILE'
-};
+  FILE = 'FILE',
+}
 
 export default CommandPartType;

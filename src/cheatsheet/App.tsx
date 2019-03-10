@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 
 import CommandTable from './command-table/CommandTable';
 import commands from './commands';
+
 import './App.css';
 
 class App extends Component {
-  render() {
+  public render(): ReactElement {
     return (
       <div>
         <Navbar bg='primary' sticky='top'>

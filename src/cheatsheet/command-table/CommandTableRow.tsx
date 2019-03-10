@@ -1,9 +1,9 @@
-import React, { ReactElement, Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 
 import { Command } from '../command/Command';
 import { CommandPart } from '../command/CommandPart';
 
-const renderPart = (part: CommandPart | string, insertSpaces: boolean, key: any): ReactElement | String => {
+const renderPart = (part: CommandPart | string, insertSpaces: boolean, key: any): ReactElement | string => {
   if (typeof(part) === 'string') {
     return (insertSpaces ? ' ' : '') + part;
   }
@@ -50,11 +50,11 @@ const renderCommand = (command: Command): ReactElement => {
 };
 
 interface CommandTableRowProps {
-  command: Command
+  command: Command;
 }
 
 export class CommandTableRow extends Component<CommandTableRowProps> {
-  render(): ReactElement {
+  public render(): ReactElement {
     const { command } = this.props;
 
     return (

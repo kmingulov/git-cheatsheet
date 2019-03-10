@@ -1,10 +1,10 @@
 import Type from './CommandPartType';
 
 export class CommandPart {
-  readonly role: Type;
-  readonly text: string;
+  public readonly role: Type;
+  public readonly text: string;
 
-  constructor (role: Type, text: string) {
+  constructor(role: Type, text: string) {
     this.role = role;
     this.text = text;
   }
