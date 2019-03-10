@@ -1,6 +1,6 @@
 import { Command } from './command/Command';
 import { CommandGroup } from './command/CommandGroup';
-import { command, file, ref, remote, url } from './command/CommandPart';
+import { command, file, ref, remote, str, url } from './command/CommandPart';
 
 const REPO_URL = url('https://example.com/some-repo');
 
@@ -59,7 +59,7 @@ const COMMITING_CHANGES: CommandGroup = new CommandGroup(
       [ command('gc') ],
     ),
     new Command(
-      [ command('commit'), '-m', '"Commit message"' ],
+      [ command('commit'), '-m', str('"Commit message"') ],
       [ 'Commit all changes in the staging area with the given commit message.' ],
       [ command('gc'), '-m', '"Commit message"' ],
     ),
@@ -131,37 +131,37 @@ const LOG: CommandGroup = new CommandGroup(
     ),
     new Command(
       [ command('log'), '--since=<date>/--after=<date>' ],
-      [ 'Show commits only after the given date. A date can be an ISO date (e.g., \'2019-01-01\', ' +
-        '\'2019-01-01T10:00:00\') or a number with a time unit (e.g., \'10.minutes\', \'3.days\'). A combination of ' +
-        'several time units is allowed, e.g., \'3.days.12.hours\'.' ],
+      [ 'Show commits made after the given date. A date can be an ISO date (e.g., ', str('"2019-01-01"'), ', ',
+        str('"2019-01-01T10:00:00"'), ') or a number with a time unit (e.g., ', str('"10.minutes"'), ', ',
+        str('"3.days"'), '). Combinations of several time units are allowed, e.g., ', str('"3.days.12.hours"'), '.' ],
       [ command('gl'), '--since=<date>/--after=<date>' ],
     ),
     new Command(
       [ command('log'), '--until=<date>/--before=<date>' ],
-      [ 'Show commits only before the given date. A date can be an ISO date (e.g., \'2019-01-01\', ' +
-        '\'2019-01-01T10:00:00\') or a number with a time unit (e.g., \'10.minutes\', \'3.days\'). A combination of ' +
-        'several time units is allowed, e.g., \'3.days.12.hours\'.' ],
+      [ 'Show commits made before the given date. A date can be an ISO date (e.g., ', str('"2019-01-01"'), ', ',
+        str('"2019-01-01T10:00:00"'), ') or a number with a time unit (e.g., ', str('"10.minutes"'), ', ',
+        str('"3.days"'), '). Combinations of several time units are allowed, e.g., ', str('"3.days.12.hours"'), '.' ],
       [ command('gl'), '--until=<date>/--before=<date>' ],
     ),
     new Command(
-      [ command('log'), '--author', '\'John Doe\'' ],
+      [ command('log'), '--author', str('"John Doe"') ],
       [ 'Show commits made by a specific author.' ],
-      [ command('gl'), '--author', '\'John Doe\'' ],
+      [ command('gl'), '--author', str('"John Doe"') ],
     ),
     new Command(
-      [ command('log'), '--committer', '\'John Doe\'' ],
+      [ command('log'), '--committer', str('"John Doe"') ],
       [ 'Show commits committed by a specific committer.' ],
-      [ command('gl'), '--committer', '\'John Doe\'' ],
+      [ command('gl'), '--committer', str('"John Doe"') ],
     ),
     new Command(
-      [ command('log'), '--grep', '\'string\'' ],
-      [ 'Show commits whose message contains the given string.' ],
-      [ command('gl'), '--grep', '\'string\'' ],
+      [ command('log'), '--grep', str('"string"') ],
+      [ 'Show commits with messages containing the given string.' ],
+      [ command('gl'), '--grep', str('"string"') ],
     ),
     new Command(
-      [ command('log'), '-S', '\'string\'' ],
+      [ command('log'), '-S', str('"string"') ],
       [ 'Show commits which contain the given string in the changes.' ],
-      [ command('gl'), '-S', '\'string\'' ],
+      [ command('gl'), '-S', str('"string"') ],
     ),
     new Command(
       [ command('log'), '--no-merges' ],

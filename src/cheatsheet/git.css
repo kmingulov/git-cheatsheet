@@ -24,3 +24,8 @@
 .git-file {
   font-style: italic;
 }
+
+.git-string {
+  font-style: italic;
+  color: #00bc8c;
+}

@@ -18,3 +18,5 @@ export const url = (cmd: string) => new CommandPart(Type.URL, cmd);
 export const ref = (cmd: string) => new CommandPart(Type.REF, cmd);
 
 export const file = (cmd: string) => new CommandPart(Type.FILE, cmd);
+
+export const str = (cmd: string) => new CommandPart(Type.STRING, cmd);

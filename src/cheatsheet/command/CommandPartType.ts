@@ -7,6 +7,8 @@ enum CommandPartType {
   REF = 'REF',
 
   FILE = 'FILE',
+
+  STRING = 'STRING',
 }
 
 export default CommandPartType;
