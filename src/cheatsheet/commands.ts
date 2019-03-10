@@ -30,22 +30,6 @@ const BASIC_COMMANDS: CommandGroup = new CommandGroup(
   ],
 );
 
-const CLONE_AND_REMOTES: CommandGroup = new CommandGroup(
-  'Clone & Remotes',
-  [
-    new Command(
-      [ command('remote'), '-v' ],
-      [ 'List all existing remotes with their URLs.' ],
-      [ command('gr') ],
-    ),
-    new Command(
-      [ command('remote'), 'add', remote('some-remote'), REPO_URL ],
-      [ 'Add remote ', remote('some-remote'), ' by its URL.' ],
-      [ command('gr'), 'add', remote('some-remote'), REPO_URL ],
-    ),
-  ],
-);
-
 const COMMITING_CHANGES: CommandGroup = new CommandGroup(
   'Commiting Changes',
   [
@@ -53,6 +37,21 @@ const COMMITING_CHANGES: CommandGroup = new CommandGroup(
       [ command('add'), file('file') ],
       [ 'Index a changed/non-tracked file and add it to the staging area.' ],
       [ command('ga'), file('file') ],
+    ),
+    new Command(
+      [ command('rm'), file('file') ],
+      [ 'Remove tracked file ', file('file'), ' and add this change to the staging area.' ],
+      [ command('grm'), file('file') ],
+    ),
+    new Command(
+      [ command('rm'), '--cached', file('file') ],
+      [ 'Remove ', file('file'), ' added to the staging area.' ],
+      [ command('grm'), '--cached', file('file') ],
+    ),
+    new Command(
+      [ command('mv'), file('name'), file('new-name') ],
+      [ 'Rename tracked file from ', file('file'), ' to ', file('new-name'), ' and add this change to the staging ' +
+        'area.' ],
     ),
     new Command(
       [ command('commit') ],
@@ -73,6 +72,121 @@ const COMMITING_CHANGES: CommandGroup = new CommandGroup(
   ],
 );
 
+const DIFF: CommandGroup = new CommandGroup(
+  'Diff',
+  [
+    new Command(
+      [ command('diff') ],
+      [ 'Show diff for all tracked and changed (but not yet staged) files.' ],
+      [ command('gd') ],
+    ),
+    new Command(
+      [ command('diff'), file('file') ],
+      [ 'Show diff for ', file('file'), '.' ],
+      [ command('gd'), file('file') ],
+    ),
+    new Command(
+      [ command('diff'), '--staged' ],
+      [ 'Show diff between the staging area and ', ref('HEAD'), '.' ],
+      [ command('gd'), file('--staged') ],
+    ),
+  ],
+);
+
+const LOG: CommandGroup = new CommandGroup(
+  'Log',
+  [
+    new Command(
+      [ command('log') ],
+      [ 'Show commit log.' ],
+      [ command('gl') ],
+    ),
+    new Command(
+      [ command('log'), '-p' ],
+      [ 'Show diff for each commit.' ],
+      [ command('gl'), '-p' ],
+    ),
+    new Command(
+      [ command('log'), '-3' ],
+      [ 'Show only last 3 commits.' ],
+      [ command('gl'), '-3' ],
+    ),
+    new Command(
+      [ command('log'), '--stat' ],
+      [ 'Show a brief report on changed files for each commit.' ],
+      [ command('gl'), '--stat' ],
+    ),
+    new Command(
+      [ command('log'), '--pretty[=format]' ],
+      [ 'Show commit log with a specified format used for commits. Valid values are: oneline, full, fuller, and ' +
+        'format (with a custom format).' ],
+    ),
+    new Command(
+      [ command('log'), '--graph' ],
+      [ 'Show commit graph.' ],
+    ),
+    new Command(
+      [ command('log'), '--abbrev-commit' ],
+      [ 'Show only first several characters of the commit hash instead of all 40.' ],
+    ),
+    new Command(
+      [ command('log'), '--since=<date>/--after=<date>' ],
+      [ 'Show commits only after the given date. A date can be an ISO date (e.g., \'2019-01-01\', ' +
+        '\'2019-01-01T10:00:00\') or a number with a time unit (e.g., \'10.minutes\', \'3.days\'). A combination of ' +
+        'several time units is allowed, e.g., \'3.days.12.hours\'.' ],
+      [ command('gl'), '--since=<date>/--after=<date>' ],
+    ),
+    new Command(
+      [ command('log'), '--until=<date>/--before=<date>' ],
+      [ 'Show commits only before the given date. A date can be an ISO date (e.g., \'2019-01-01\', ' +
+        '\'2019-01-01T10:00:00\') or a number with a time unit (e.g., \'10.minutes\', \'3.days\'). A combination of ' +
+        'several time units is allowed, e.g., \'3.days.12.hours\'.' ],
+      [ command('gl'), '--until=<date>/--before=<date>' ],
+    ),
+    new Command(
+      [ command('log'), '--author', '\'John Doe\'' ],
+      [ 'Show commits made by a specific author.' ],
+      [ command('gl'), '--author', '\'John Doe\'' ],
+    ),
+    new Command(
+      [ command('log'), '--committer', '\'John Doe\'' ],
+      [ 'Show commits committed by a specific committer.' ],
+      [ command('gl'), '--committer', '\'John Doe\'' ],
+    ),
+    new Command(
+      [ command('log'), '--grep', '\'string\'' ],
+      [ 'Show commits whose message contains the given string.' ],
+      [ command('gl'), '--grep', '\'string\'' ],
+    ),
+    new Command(
+      [ command('log'), '-S', '\'string\'' ],
+      [ 'Show commits which contain the given string in the changes.' ],
+      [ command('gl'), '-S', '\'string\'' ],
+    ),
+    new Command(
+      [ command('log'), '--no-merges' ],
+      [ 'Do not show merge commits.' ],
+      [ command('gl'), '--no-merges' ],
+    ),
+  ],
+);
+
+const REMOTES: CommandGroup = new CommandGroup(
+  'Remotes',
+  [
+    new Command(
+      [ command('remote'), '-v' ],
+      [ 'List all existing remotes with their URLs.' ],
+      [ command('gr') ],
+    ),
+    new Command(
+      [ command('remote'), 'add', remote('some-remote'), REPO_URL ],
+      [ 'Add remote ', remote('some-remote'), ' by its URL.' ],
+      [ command('gr'), 'add', remote('some-remote'), REPO_URL ],
+    ),
+  ],
+);
+
 const CONFIGURATION: CommandGroup = new CommandGroup(
   'Configuration',
   [
@@ -82,7 +196,7 @@ const CONFIGURATION: CommandGroup = new CommandGroup(
     ),
     new Command(
       [ command('config'), 'option' ],
-      [ 'Show current value for the configuration setting.' ],
+      [ 'Show the current value for a configuration setting.' ],
     ),
     new Command(
       [ command('config'), '--global', 'option', 'value' ],
@@ -93,8 +207,10 @@ const CONFIGURATION: CommandGroup = new CommandGroup(
 
 const COMMAND_GROUPS: CommandGroup[] = [
   BASIC_COMMANDS,
-  CLONE_AND_REMOTES,
   COMMITING_CHANGES,
+  DIFF,
+  LOG,
+  REMOTES,
   CONFIGURATION,
 ];
 
