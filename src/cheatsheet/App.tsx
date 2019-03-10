@@ -1,5 +1,6 @@
 import React, { Component, ReactElement } from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, FormControl, InputGroup, Navbar } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
 
 import { CommandStore } from './command-store/CommandStore';
 import CommandTable from './command-table/CommandTable';
@@ -9,7 +10,12 @@ import './App.css';
 
 const store = new CommandStore(commands);
 
-class App extends Component {
+const initialState = { searchTerm: '' };
+type State = Readonly<typeof initialState>;
+
+class App extends Component<object, State> {
+  public readonly state: State = initialState;
+
   public render(): ReactElement {
     return (
       <div>
@@ -20,7 +26,19 @@ class App extends Component {
         </Navbar>
 
         <Container className='mainContent'>
-          <CommandTable store={ store }/>
+          <InputGroup className='searchBox'>
+            <InputGroup.Prepend>
+              <InputGroup.Text>
+                <FaSearch/>
+              </InputGroup.Text>
+            </InputGroup.Prepend>
+              <FormControl
+                placeholder='Search…'
+                onChange={ (event: any) => this.setState({ searchTerm: event.target.value }) }
+              />
+          </InputGroup>
+
+          <CommandTable store={ store } searchTerm={ this.state.searchTerm }/>
         </Container>
       </div>
     );
