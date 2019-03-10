@@ -36,7 +36,7 @@ const renderCommand = (command: Command): ReactElement => {
     </span>
   );
 
-  if (command.scmBreezeShortcut === null) {
+  if (command.scmBreezeShortcut.length === 0) {
     return renderedCommand;
   }
 
@@ -45,7 +45,7 @@ const renderCommand = (command: Command): ReactElement => {
       { renderedCommand }
       <br/>
       <small>
-        { command.scmBreezeShortcut }
+        { command.scmBreezeShortcut.map((part, i) => renderPart(part, true, i)) }
       </small>
     </span>
   );
