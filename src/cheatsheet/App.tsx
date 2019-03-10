@@ -1,10 +1,13 @@
 import React, { Component, ReactElement } from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 
+import { CommandStore } from './command-store/CommandStore';
 import CommandTable from './command-table/CommandTable';
 import commands from './commands';
 
 import './App.css';
+
+const store = new CommandStore(commands);
 
 class App extends Component {
   public render(): ReactElement {
@@ -17,7 +20,7 @@ class App extends Component {
         </Navbar>
 
         <Container className='mainContent'>
-          <CommandTable groups={ commands }/>
+          <CommandTable store={ store }/>
         </Container>
       </div>
     );
