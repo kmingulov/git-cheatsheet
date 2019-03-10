@@ -32,7 +32,7 @@ const renderCommand = (command: Command): ReactElement => {
   const renderedCommand = (
     <span>
       <span className='git'>git</span>
-      { command.commandParts.map((part, i) => renderPart(part, true, i)) }
+      { command.command.map((part, i) => renderPart(part, true, i)) }
     </span>
   );
 
@@ -65,7 +65,7 @@ export class CommandTableRow extends Component<CommandTableRowProps> {
           { renderCommand(command) }
         </td>
         <td>
-          { command.descriptionParts.map((part, i) => renderPart(part, false, i)) }
+          { command.description.map((part, i) => renderPart(part, false, i)) }
         </td>
       </tr>
     );
