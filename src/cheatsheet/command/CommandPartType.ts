@@ -4,8 +4,6 @@ enum CommandPartType {
   REMOTE = 'REMOTE',
   URL = 'URL',
 
-  BRANCH = 'BRANCH',
-  COMMIT = 'COMMIT',
   REF = 'REF',
 
   FILE = 'FILE',

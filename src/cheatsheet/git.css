@@ -16,13 +16,10 @@
   text-decoration: underline;
 }
 
-.git-branch {
+.git-ref {
   font-weight: bold;
+  color: #3498db;
 }
-
-/* .git-commit { } */
-
-/* .git-ref { } */
 
 .git-file {
   font-style: italic;
