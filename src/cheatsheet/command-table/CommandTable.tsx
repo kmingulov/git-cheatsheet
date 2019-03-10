@@ -6,11 +6,17 @@ import { CommandGroupTable } from './CommandGroupTable';
 
 interface CommandTableProps {
   store: CommandStore;
+  searchTerm?: string;
 }
 
 class CommandTable extends Component<CommandTableProps> {
   public render(): ReactElement {
-    const groups: CommandGroup[] = this.props.store.getAll();
+    const { store, searchTerm } = this.props;
+
+    const groups: CommandGroup[] = searchTerm != null && searchTerm !== ''
+      ? store.search(searchTerm)
+      : store.getAll();
+
     return (
       <div>
         { groups.map(group => <CommandGroupTable group={ group } key={ group.title }/>) }
