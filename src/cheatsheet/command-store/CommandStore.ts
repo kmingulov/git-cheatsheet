@@ -29,8 +29,8 @@ export class CommandStore {
       || command.scmBreezeShortcut.some(part => this.partMatches(searchTerm, part));
   }
 
-  private partMatches(searchTerm: string, part: CommandPart | string) {
+  private partMatches(searchTerm: string, part: CommandPart | string): boolean {
     const text = typeof(part) === 'string' ? part : part.text;
-    return text.includes(searchTerm);
+    return text.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1;
   }
 }
