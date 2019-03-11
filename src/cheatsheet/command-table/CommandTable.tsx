@@ -14,7 +14,7 @@ class CommandTable extends Component<CommandTableProps> {
     const { store, searchTerm } = this.props;
 
     const groups: CommandGroup[] = searchTerm != null && searchTerm !== ''
-      ? store.search(searchTerm)
+      ? [ new CommandGroup('Search Results', store.search(searchTerm)) ]
       : store.getAll();
 
     return (

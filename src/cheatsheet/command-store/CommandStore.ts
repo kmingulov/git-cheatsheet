@@ -13,10 +13,10 @@ export class CommandStore {
     return this.commandGroups;
   }
 
-  public search(searchTerm: string): CommandGroup[] {
+  public search(searchTerm: string): Command[] {
     return this.commandGroups
-      .map(group => new CommandGroup(group.title, this.searchCommands(searchTerm, group.commands)))
-      .filter(group => group.commands.length !== 0);
+      .map(group => this.searchCommands(searchTerm, group.commands))
+      .reduce((a, b) => a.concat(b), []);
   }
 
   private searchCommands(searchTerm: string, commands: Command[]): Command[] {
