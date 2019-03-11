@@ -9,6 +9,8 @@ enum CommandPartType {
   FILE = 'FILE',
 
   STRING = 'STRING',
+
+  HIGHLIGHT = 'HIGHLIGHT',
 }
 
 export default CommandPartType;
