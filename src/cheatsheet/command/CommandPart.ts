@@ -10,6 +10,8 @@ export class CommandPart {
   }
 }
 
+export const none = (cmd: string) => new CommandPart(Type.NONE, cmd);
+
 export const command = (cmd: string) => new CommandPart(Type.COMMAND, cmd);
 
 export const remote = (cmd: string) => new CommandPart(Type.REMOTE, cmd);

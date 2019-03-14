@@ -1,4 +1,6 @@
 enum CommandPartType {
+  NONE = 'NONE',
+
   COMMAND = 'COMMAND',
 
   REMOTE = 'REMOTE',

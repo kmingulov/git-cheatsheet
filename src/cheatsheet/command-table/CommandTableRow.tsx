@@ -2,10 +2,11 @@ import React, { Component, ReactElement } from 'react';
 
 import { Command } from '../command/Command';
 import { CommandPart } from '../command/CommandPart';
+import Type from '../command/CommandPartType';
 
-const renderPart = (part: CommandPart | string, insertSpaces: boolean, key: any): ReactElement | string => {
-  if (typeof(part) === 'string') {
-    return (insertSpaces ? ' ' : '') + part;
+const renderPart = (part: CommandPart, insertSpaces: boolean, key: any): ReactElement | string => {
+  if (part.role === Type.NONE) {
+    return (insertSpaces ? ' ' : '') + part.text;
   }
 
   const className: string = 'git-' + part.role.toString().toLocaleLowerCase();

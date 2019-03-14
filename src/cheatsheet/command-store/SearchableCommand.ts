@@ -1,11 +1,8 @@
 import { Command } from '../command/Command';
 import { CommandPart } from '../command/CommandPart';
 
-const partToString = (part: CommandPart | string): string =>
-  (typeof part === 'string') ? part : part.text;
-
-const partsToString = (parts: Array<CommandPart | string>, delimeter: string): string =>
-  parts.map(partToString).join(delimeter);
+const partsToString = (parts: CommandPart[], delimeter: string): string =>
+  parts.map(part => part.text).join(delimeter);
 
 export class SearchableCommand {
   public readonly id: string;
