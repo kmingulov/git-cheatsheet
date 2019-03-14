@@ -2,6 +2,7 @@ import { Builder, Index, PipelineFunction, Query } from 'lunr';
 
 import { Command } from '../command/Command';
 import { CommandGroup } from '../command/CommandGroup';
+import { CommandHighlighter } from './CommandHighlighter';
 import { SearchableCommand } from './SearchableCommand';
 
 const IGNORED_TOKEN_CHARS = /\W+/;
@@ -78,7 +79,9 @@ export class CommandStore {
       q.term(terms, { usePipeline: false, editDistance: 1, boost: 1 });
     });
 
-    return results
-      .map(searchResult => this.commandById[searchResult.ref]);
+    return CommandHighlighter.highlightAll(
+      results.map(searchResult => this.commandById[searchResult.ref]),
+      terms,
+    );
   }
 }
