@@ -1,5 +1,5 @@
-import { Command } from '../command/Command';
-import { CommandPart } from '../command/CommandPart';
+import { Command } from 'cheatsheet/command/Command';
+import { CommandPart } from 'cheatsheet/command/CommandPart';
 
 const partsToString = (parts: CommandPart[], delimeter: string): string =>
   parts.map(part => part.text).join(delimeter);

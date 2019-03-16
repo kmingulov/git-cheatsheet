@@ -1,6 +1,6 @@
-import { Command } from '../command/Command';
-import { CommandPart, highlight } from '../command/CommandPart';
-import Type from '../command/CommandPartType';
+import { Command } from 'cheatsheet/command/Command';
+import { CommandPart } from 'cheatsheet/command/CommandPart';
+import Type from 'cheatsheet/command/CommandPartType';
 
 const highlightPart = (part: CommandPart, regexp: RegExp): CommandPart[] =>
   part.text.split(regexp)

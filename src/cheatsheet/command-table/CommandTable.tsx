@@ -1,7 +1,7 @@
 import React, { Component, ReactElement } from 'react';
 
-import { CommandStore } from '../command-store/CommandStore';
-import { CommandGroup } from '../command/CommandGroup';
+import { CommandStore } from 'cheatsheet/command-store/CommandStore';
+import { CommandGroup } from 'cheatsheet/command/CommandGroup';
 import { CommandGroupTable } from './CommandGroupTable';
 
 interface CommandTableProps {
