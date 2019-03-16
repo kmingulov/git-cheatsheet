@@ -1,11 +1,9 @@
 import React, { Component, ReactElement } from 'react';
 
-import { Command } from '../command/Command';
-import { CommandPart } from '../command/CommandPart';
-import Type from '../command/CommandPartType';
+import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
 const renderPart = (part: CommandPart, insertSpaces: boolean, key: any): ReactElement | string => {
-  if (part.role === Type.NONE) {
+  if (part.role === CommandPartType.NONE) {
     return (insertSpaces ? ' ' : '') + part.text;
   }
 

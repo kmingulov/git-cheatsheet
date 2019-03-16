@@ -1,7 +1,7 @@
 import React, { Component, ReactElement } from 'react';
 import { Badge, Table } from 'react-bootstrap';
 
-import { CommandGroup } from 'cheatsheet/command/CommandGroup';
+import { CommandGroup } from 'cheatsheet/command';
 import { CommandTableRow } from './CommandTableRow';
 
 interface CommandGroupTableProps {

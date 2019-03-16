@@ -1,7 +1,6 @@
 import { Builder, Index, PipelineFunction, Query } from 'lunr';
 
-import { Command } from 'cheatsheet/command/Command';
-import { CommandGroup } from 'cheatsheet/command/CommandGroup';
+import { Command, CommandGroup } from 'cheatsheet/command';
 import { CommandHighlighter } from './CommandHighlighter';
 import { SearchableCommand } from './SearchableCommand';
 

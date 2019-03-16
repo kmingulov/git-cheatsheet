@@ -1,12 +1,10 @@
-import { Command } from 'cheatsheet/command/Command';
-import { CommandPart } from 'cheatsheet/command/CommandPart';
-import Type from 'cheatsheet/command/CommandPartType';
+import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
 const highlightPart = (part: CommandPart, regexp: RegExp): CommandPart[] =>
   part.text.split(regexp)
     .map(item =>
       item.match(regexp)
-        ? new CommandPart(Type.HIGHLIGHT, item)
+        ? new CommandPart(CommandPartType.HIGHLIGHT, item)
         : new CommandPart(part.role, item),
     );
 

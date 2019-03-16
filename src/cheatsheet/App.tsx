@@ -2,8 +2,8 @@ import React, { Component, ReactElement } from 'react';
 import { Container, FormControl, InputGroup, Navbar } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
 
-import { CommandStore } from './command-store/CommandStore';
-import CommandTable from './command-table/CommandTable';
+import { CommandStore } from './command-store';
+import { CommandTable } from './command-table';
 import commands from './commands';
 
 import './App.css';

@@ -1,7 +1,7 @@
 import React, { Component, ReactElement } from 'react';
 
-import { CommandStore } from 'cheatsheet/command-store/CommandStore';
-import { CommandGroup } from 'cheatsheet/command/CommandGroup';
+import { CommandGroup } from 'cheatsheet/command';
+import { CommandStore } from 'cheatsheet/command-store';
 import { CommandGroupTable } from './CommandGroupTable';
 
 interface CommandTableProps {
@@ -9,7 +9,7 @@ interface CommandTableProps {
   searchTerm?: string;
 }
 
-class CommandTable extends Component<CommandTableProps> {
+export class CommandTable extends Component<CommandTableProps> {
   public render(): ReactElement {
     const { store, searchTerm } = this.props;
 
@@ -24,5 +24,3 @@ class CommandTable extends Component<CommandTableProps> {
     );
   }
 }
-
-export default CommandTable;

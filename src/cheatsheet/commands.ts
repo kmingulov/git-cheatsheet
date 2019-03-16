@@ -1,6 +1,4 @@
-import { Command } from './command/Command';
-import { CommandGroup } from './command/CommandGroup';
-import { command, file, ref, remote, str, url } from './command/CommandPart';
+import { Command, command, CommandGroup, file, ref, remote, str, url } from './command';
 
 const REPO_URL = url('https://example.com/some-repo');
 

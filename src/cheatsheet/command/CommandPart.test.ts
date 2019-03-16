@@ -1,10 +1,10 @@
 import { CommandPart, highlight, none } from './CommandPart';
-import Type from './CommandPartType';
+import { CommandPartType } from './CommandPartType';
 
 describe(none, () => {
   it('wraps given string', () => {
     const actual = none('part');
-    const expected = new CommandPart(Type.NONE, 'part');
+    const expected = new CommandPart(CommandPartType.NONE, 'part');
     expect(actual).toEqual(expected);
   });
 });
@@ -12,7 +12,7 @@ describe(none, () => {
 describe(highlight, () => {
   it('wraps given string', () => {
     const actual = highlight('part');
-    const expected = new CommandPart(Type.HIGHLIGHT, 'part');
+    const expected = new CommandPart(CommandPartType.HIGHLIGHT, 'part');
     expect(actual).toEqual(expected);
   });
 
@@ -20,7 +20,7 @@ describe(highlight, () => {
     const part = none('part');
 
     const actual = highlight(part);
-    const expected = new CommandPart(Type.HIGHLIGHT, 'part');
+    const expected = new CommandPart(CommandPartType.HIGHLIGHT, 'part');
     expect(actual).toEqual(expected);
   });
 });

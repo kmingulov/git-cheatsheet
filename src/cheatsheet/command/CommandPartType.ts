@@ -1,4 +1,4 @@
-enum CommandPartType {
+export enum CommandPartType {
   NONE = 'NONE',
 
   COMMAND = 'COMMAND',
@@ -14,5 +14,3 @@ enum CommandPartType {
 
   HIGHLIGHT = 'HIGHLIGHT',
 }
-
-export default CommandPartType;
