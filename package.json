@@ -18,18 +18,16 @@
     "typescript": "3.3.3333"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "tslint": "^5.13.1",
     "tslint-react": "^3.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "tslint 'src/**/*.{ts,tsx}'"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test": "react-scripts test --coverage",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "all": "npm-run-all test lint build"
   },
   "browserslist": [
     ">0.2%",
