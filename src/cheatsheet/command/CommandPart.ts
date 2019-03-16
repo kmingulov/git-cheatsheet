@@ -10,20 +10,20 @@ export class CommandPart {
   }
 }
 
-export const none = (cmd: string) => new CommandPart(Type.NONE, cmd);
+export const none = (part: string) => new CommandPart(Type.NONE, part);
 
-export const command = (cmd: string) => new CommandPart(Type.COMMAND, cmd);
+export const command = (part: string) => new CommandPart(Type.COMMAND, part);
 
-export const remote = (cmd: string) => new CommandPart(Type.REMOTE, cmd);
-export const url = (cmd: string) => new CommandPart(Type.URL, cmd);
+export const remote = (part: string) => new CommandPart(Type.REMOTE, part);
+export const url = (part: string) => new CommandPart(Type.URL, part);
 
-export const ref = (cmd: string) => new CommandPart(Type.REF, cmd);
+export const ref = (part: string) => new CommandPart(Type.REF, part);
 
-export const file = (cmd: string) => new CommandPart(Type.FILE, cmd);
+export const file = (part: string) => new CommandPart(Type.FILE, part);
 
-export const str = (cmd: string) => new CommandPart(Type.STRING, cmd);
+export const str = (part: string) => new CommandPart(Type.STRING, part);
 
-export const highlight = (cmd: string | CommandPart) => {
-  const text = (typeof cmd === 'string') ? cmd : cmd.text;
+export const highlight = (part: string | CommandPart) => {
+  const text = (typeof part === 'string') ? part : part.text;
   return new CommandPart(Type.HIGHLIGHT, text);
 };
