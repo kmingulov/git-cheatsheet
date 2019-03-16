@@ -4,7 +4,8 @@ import { FaSearch } from 'react-icons/fa';
 
 import { CommandStore } from './command-store';
 import { CommandTable } from './command-table';
-import commands from './commands';
+
+import commands from './command-data/commands';
 
 import './App.css';
 
