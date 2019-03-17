@@ -14,7 +14,7 @@ const store = new CommandStore(commands);
 const initialState = { searchTerm: '' };
 type State = Readonly<typeof initialState>;
 
-class App extends Component<object, State> {
+export class App extends Component<object, State> {
   public readonly state: State = initialState;
 
   public render(): ReactElement {
@@ -45,5 +45,3 @@ class App extends Component<object, State> {
     );
   }
 }
-
-export default App;
