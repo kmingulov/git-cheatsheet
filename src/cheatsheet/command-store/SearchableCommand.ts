@@ -1,7 +1,7 @@
 import { Command, CommandPart } from 'cheatsheet/command';
 
-const partsToString = (parts: CommandPart[], delimeter: string): string =>
-  parts.map(part => part.text).join(delimeter);
+const partsToString = (parts: CommandPart[]): string =>
+  parts.map(part => part.text).join('');
 
 export class SearchableCommand {
   public readonly id: string;
@@ -11,8 +11,8 @@ export class SearchableCommand {
 
   constructor(command: Command) {
     this.id = command.id;
-    this.command = partsToString(command.command, ' ');
-    this.description = partsToString(command.description, '');
-    this.scmBreezeShortcut = partsToString(command.scmBreezeShortcut, ' ');
+    this.command = partsToString(command.command);
+    this.description = partsToString(command.description);
+    this.scmBreezeShortcut = partsToString(command.scmBreezeShortcut);
   }
 }
