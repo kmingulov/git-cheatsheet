@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommandTableRow renders correctly a command with shortcut 1`] = `
+<table>
+  <tbody>
+    <CommandTableRow
+      command={
+        Command {
+          "command": Array [
+            CommandPart {
+              "role": "COMMAND",
+              "text": "commit",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": " ",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": "-m",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": "message",
+            },
+          ],
+          "description": Array [
+            CommandPart {
+              "role": "NONE",
+              "text": "Commit changes in the staging area with the given message.",
+            },
+          ],
+          "id": "cmd-1",
+          "scmBreezeShortcut": Array [
+            CommandPart {
+              "role": "COMMAND",
+              "text": "gc",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": " ",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": "-m",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": "message",
+            },
+          ],
+        }
+      }
+    >
+      <tr>
+        <td
+          className="git-command-column"
+        >
+          <span>
+            <span>
+              <span
+                className="git"
+              >
+                git
+              </span>
+               
+              <span
+                className="git-command"
+                key="0"
+              >
+                commit
+              </span>
+               
+              -m
+              message
+            </span>
+            <br />
+            <small>
+              <span
+                className="git-command"
+                key="0"
+              >
+                gc
+              </span>
+               
+              -m
+              message
+            </small>
+          </span>
+        </td>
+        <td>
+          Commit changes in the staging area with the given message.
+        </td>
+      </tr>
+    </CommandTableRow>
+  </tbody>
+</table>
+`;
+
+exports[`CommandTableRow renders correctly a command without shortcut 1`] = `
+<table>
+  <tbody>
+    <CommandTableRow
+      command={
+        Command {
+          "command": Array [
+            CommandPart {
+              "role": "COMMAND",
+              "text": "commit",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": " ",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": "-m",
+            },
+            CommandPart {
+              "role": "NONE",
+              "text": "message",
+            },
+          ],
+          "description": Array [
+            CommandPart {
+              "role": "NONE",
+              "text": "Commit changes in the staging area with the given message.",
+            },
+          ],
+          "id": "cmd-1",
+          "scmBreezeShortcut": Array [],
+        }
+      }
+    >
+      <tr>
+        <td
+          className="git-command-column"
+        >
+          <span>
+            <span
+              className="git"
+            >
+              git
+            </span>
+             
+            <span
+              className="git-command"
+              key="0"
+            >
+              commit
+            </span>
+             
+            -m
+            message
+          </span>
+        </td>
+        <td>
+          Commit changes in the staging area with the given message.
+        </td>
+      </tr>
+    </CommandTableRow>
+  </tbody>
+</table>
+`;
