@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`staticComponent doesn't re-render the wrapped component 1`] = `
+<staticComponent(Counter)>
+  <Counter>
+    <div>
+      1
+    </div>
+  </Counter>
+</staticComponent(Counter)>
+`;
+
+exports[`staticComponent doesn't re-render the wrapped component 2`] = `
+<staticComponent(Counter)
+  prop="value"
+>
+  <Counter>
+    <div>
+      1
+    </div>
+  </Counter>
+</staticComponent(Counter)>
+`;
+
+exports[`staticComponent renders the wrapped component 1`] = `
+<staticComponent(Counter)>
+  <Counter>
+    <div>
+      1
+    </div>
+  </Counter>
+</staticComponent(Counter)>
+`;
