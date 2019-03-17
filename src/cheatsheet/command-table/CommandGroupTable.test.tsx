@@ -19,4 +19,12 @@ describe(CommandGroupTable, () => {
     const component = mount(<CommandGroupTable group={ group }/>);
     expect(component).toMatchSnapshot();
   });
+
+  it('re-renders when props are changed', () => {
+    const component = mount(<CommandGroupTable group={ group }/>);
+    expect(component).toMatchSnapshot();
+
+    component.setProps({ group: new CommandGroup('Another Group', []) });
+    expect(component).toMatchSnapshot();
+  });
 });

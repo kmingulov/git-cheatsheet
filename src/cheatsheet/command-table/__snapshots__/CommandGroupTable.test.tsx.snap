@@ -1,5 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CommandGroupTable re-renders when props are changed 1`] = `
+<CommandGroupTable
+  group={
+    CommandGroup {
+      "commands": Array [
+        Command {
+          "command": Array [],
+          "description": Array [],
+          "id": "cmd-1",
+          "scmBreezeShortcut": Array [],
+        },
+        Command {
+          "command": Array [],
+          "description": Array [],
+          "id": "cmd-2",
+          "scmBreezeShortcut": Array [],
+        },
+      ],
+      "title": "Basic Commands",
+    }
+  }
+>
+  <div>
+    <h4>
+      Basic Commands
+       
+      <ForwardRef(Bootstrap(Badge))
+        variant="secondary"
+      >
+        <Badge
+          bsPrefix="badge"
+          pill={false}
+          variant="secondary"
+        >
+          <span
+            className="badge badge-secondary"
+          >
+            2
+          </span>
+        </Badge>
+      </ForwardRef(Bootstrap(Badge))>
+    </h4>
+    <ForwardRef(Bootstrap(Table))
+      bordered={true}
+      striped={true}
+    >
+      <Table
+        bordered={true}
+        bsPrefix="table"
+        striped={true}
+      >
+        <table
+          className="table table-striped table-bordered"
+        >
+          <tbody>
+            <CommandTableRow
+              command={
+                Command {
+                  "command": Array [],
+                  "description": Array [],
+                  "id": "cmd-1",
+                  "scmBreezeShortcut": Array [],
+                }
+              }
+              key="0"
+            />
+            <CommandTableRow
+              command={
+                Command {
+                  "command": Array [],
+                  "description": Array [],
+                  "id": "cmd-2",
+                  "scmBreezeShortcut": Array [],
+                }
+              }
+              key="1"
+            />
+          </tbody>
+        </table>
+      </Table>
+    </ForwardRef(Bootstrap(Table))>
+  </div>
+</CommandGroupTable>
+`;
+
+exports[`CommandGroupTable re-renders when props are changed 2`] = `
+<CommandGroupTable
+  group={
+    CommandGroup {
+      "commands": Array [],
+      "title": "Another Group",
+    }
+  }
+>
+  <div>
+    <h4>
+      Another Group
+       
+      <ForwardRef(Bootstrap(Badge))
+        variant="secondary"
+      >
+        <Badge
+          bsPrefix="badge"
+          pill={false}
+          variant="secondary"
+        >
+          <span
+            className="badge badge-secondary"
+          >
+            0
+          </span>
+        </Badge>
+      </ForwardRef(Bootstrap(Badge))>
+    </h4>
+    <ForwardRef(Bootstrap(Table))
+      bordered={true}
+      striped={true}
+    >
+      <Table
+        bordered={true}
+        bsPrefix="table"
+        striped={true}
+      >
+        <table
+          className="table table-striped table-bordered"
+        >
+          <tbody />
+        </table>
+      </Table>
+    </ForwardRef(Bootstrap(Table))>
+  </div>
+</CommandGroupTable>
+`;
+
 exports[`CommandGroupTable renders correctly 1`] = `
 <CommandGroupTable
   group={
