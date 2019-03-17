@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import React, { PureComponent, ReactElement } from 'react';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import { MdClear, MdSearch } from 'react-icons/md';
 
@@ -10,7 +10,7 @@ import { staticComponent } from 'cheatsheet/util/componentUtils';
 const StaticInputGroup = staticComponent(InputGroup);
 
 type State = Readonly<{ searchTerm: string }>;
-export class CommandPage extends Component<object, State> {
+export class CommandPage extends PureComponent<object, State> {
   public readonly state: State = { searchTerm: '' };
 
   private store: CommandStore = new LunrCommandStore(commands);

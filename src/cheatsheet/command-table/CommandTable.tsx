@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import React, { PureComponent, ReactElement } from 'react';
 
 import { CommandGroup } from 'cheatsheet/command';
 import { CommandStore } from 'cheatsheet/command-store';
@@ -9,7 +9,7 @@ interface CommandTableProps {
   searchTerm?: string;
 }
 
-export class CommandTable extends Component<CommandTableProps> {
+export class CommandTable extends PureComponent<CommandTableProps> {
   public render(): ReactElement {
     const { store, searchTerm } = this.props;
 
