@@ -1,11 +1,12 @@
 import React, { Component, ReactElement } from 'react';
-import { Container, FormControl, InputGroup, Navbar } from 'react-bootstrap';
+import { Container, FormControl, InputGroup } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
 
+import commands from 'cheatsheet/command-data/commands';
 import { CommandStore } from 'cheatsheet/command-store';
 import { CommandTable } from 'cheatsheet/command-table';
 
-import commands from 'cheatsheet/command-data/commands';
+import { AppHeader } from './AppHeader';
 
 import './App.css';
 
@@ -20,11 +21,7 @@ export class App extends Component<object, State> {
   public render(): ReactElement {
     return (
       <div>
-        <Navbar bg='primary' sticky='top'>
-          <Container className='header'>
-            <Navbar.Brand>Git Cheatsheet</Navbar.Brand>
-          </Container>
-        </Navbar>
+        <AppHeader/>
 
         <Container className='mainContent'>
           <InputGroup className='searchBox'>
