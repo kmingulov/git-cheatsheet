@@ -1,6 +1,8 @@
 import React, { Component, ReactElement } from 'react';
 import { Badge, Table } from 'react-bootstrap';
 
+import equal from 'fast-deep-equal';
+
 import { CommandGroup } from 'cheatsheet/command';
 import { CommandTableRow } from './CommandTableRow';
 
@@ -9,6 +11,10 @@ interface CommandGroupTableProps {
 }
 
 export class CommandGroupTable extends Component<CommandGroupTableProps> {
+  public shouldComponentUpdate(nextProps: Readonly<CommandGroupTableProps>): boolean {
+    return !equal(this.props, nextProps);
+  }
+
   public render(): ReactElement {
     const { group } = this.props;
 
