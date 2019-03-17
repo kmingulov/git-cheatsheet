@@ -3,18 +3,17 @@ import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import { MdClear, MdSearch } from 'react-icons/md';
 
 import commands from 'cheatsheet/command-data/commands';
-import { LunrCommandStore } from 'cheatsheet/command-store';
+import { CommandStore, LunrCommandStore } from 'cheatsheet/command-store';
 import { CommandTable } from 'cheatsheet/command-table';
 import { staticComponent } from 'cheatsheet/util/componentUtils';
 
-const store = new LunrCommandStore(commands);
-
-type State = Readonly<{ searchTerm: string }>;
-
 const StaticInputGroup = staticComponent(InputGroup);
 
+type State = Readonly<{ searchTerm: string }>;
 export class CommandPage extends Component<object, State> {
   public readonly state: State = { searchTerm: '' };
+
+  private store: CommandStore = new LunrCommandStore(commands);
 
   public render(): ReactElement {
     return (
@@ -39,7 +38,7 @@ export class CommandPage extends Component<object, State> {
           </InputGroup.Append>
         </StaticInputGroup>
 
-        <CommandTable store={ store } searchTerm={ this.state.searchTerm }/>
+        <CommandTable store={ this.store } searchTerm={ this.state.searchTerm }/>
       </div>
     );
   }
