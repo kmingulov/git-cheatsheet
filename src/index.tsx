@@ -6,6 +6,11 @@ import 'bootswatch/dist/darkly/bootstrap.min.css';
 import App from './cheatsheet/App';
 import './index.css';
 
+if (process.env.NODE_ENV !== 'production') {
+  const { whyDidYouUpdate } = require('why-did-you-update'); // tslint:disable-line:no-var-requires
+  whyDidYouUpdate(React);
+}
+
 ReactDOM.render(
   <App/>,
   document.getElementById('root'),
