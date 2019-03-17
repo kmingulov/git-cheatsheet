@@ -1,6 +1,6 @@
 import React, { Component, ReactElement } from 'react';
-import { FormControl, InputGroup } from 'react-bootstrap';
-import { FaSearch } from 'react-icons/fa';
+import { Button, FormControl, InputGroup } from 'react-bootstrap';
+import { MdClear, MdSearch } from 'react-icons/md';
 
 import commands from 'cheatsheet/command-data/commands';
 import { CommandStore } from 'cheatsheet/command-store';
@@ -22,17 +22,33 @@ export class CommandPage extends Component<object, State> {
         <StaticInputGroup className='searchBox'>
           <InputGroup.Prepend>
             <InputGroup.Text>
-              <FaSearch/>
+              <MdSearch/>
             </InputGroup.Text>
           </InputGroup.Prepend>
-            <FormControl
-              placeholder='Search…'
-              onChange={ (event: any) => this.setState({ searchTerm: event.target.value }) }
-            />
+          <FormControl
+            placeholder='Search…'
+            onChange={ this.onChange }
+          />
+          <InputGroup.Append>
+            <Button
+              variant='secondary'
+              onClick={ this.onClear }
+            >
+              <MdClear/>
+            </Button>
+          </InputGroup.Append>
         </StaticInputGroup>
 
         <CommandTable store={ store } searchTerm={ this.state.searchTerm }/>
       </div>
     );
+  }
+
+  private onChange = (event: any): void => {
+    this.setState({ searchTerm: event.target.value });
+  }
+
+  private onClear = (): void => {
+    this.setState({ searchTerm: '' });
   }
 }
