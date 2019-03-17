@@ -7,7 +7,8 @@ import { CommandStore, LunrCommandStore } from 'cheatsheet/command-store';
 import { CommandTable } from 'cheatsheet/command-table';
 import { staticComponent } from 'cheatsheet/util/componentUtils';
 
-const StaticInputGroup = staticComponent(InputGroup);
+const StaticInputGroupPrepend = staticComponent(InputGroup.Prepend);
+const StaticInputGroupAppend = staticComponent(InputGroup.Append);
 
 type State = Readonly<{ searchTerm: string }>;
 export class CommandPage extends PureComponent<object, State> {
@@ -16,29 +17,32 @@ export class CommandPage extends PureComponent<object, State> {
   private store: CommandStore = new LunrCommandStore(commands);
 
   public render(): ReactElement {
+    const { searchTerm } = this.state;
+
     return (
       <div>
-        <StaticInputGroup className='searchBox'>
-          <InputGroup.Prepend>
+        <InputGroup className='searchBox'>
+          <StaticInputGroupPrepend>
             <InputGroup.Text>
               <MdSearch/>
             </InputGroup.Text>
-          </InputGroup.Prepend>
+          </StaticInputGroupPrepend>
           <FormControl
+            value={ searchTerm }
             placeholder='Search…'
             onChange={ this.onChange }
           />
-          <InputGroup.Append>
+          <StaticInputGroupAppend>
             <Button
               variant='secondary'
               onClick={ this.onClear }
             >
               <MdClear/>
             </Button>
-          </InputGroup.Append>
-        </StaticInputGroup>
+          </StaticInputGroupAppend>
+        </InputGroup>
 
-        <CommandTable store={ this.store } searchTerm={ this.state.searchTerm }/>
+        <CommandTable store={ this.store } searchTerm={ searchTerm }/>
       </div>
     );
   }
