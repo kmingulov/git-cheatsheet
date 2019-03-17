@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader renders correctly 1`] = `
+<AppHeader>
+  <ForwardRef(Bootstrap(undefined))
+    bg="primary"
+    sticky="top"
+  >
+    <ForwardRef
+      bg="primary"
+      bsPrefix="navbar"
+      innerRef={null}
+      sticky="top"
+    >
+      <Uncontrolled(Navbar)
+        bg="primary"
+        bsPrefix="navbar"
+        innerRef={null}
+        sticky="top"
+      >
+        <Navbar
+          as="nav"
+          bg="primary"
+          bsPrefix="navbar"
+          collapseOnSelect={false}
+          expand={true}
+          onToggle={[Function]}
+          sticky="top"
+          variant="light"
+        >
+          <nav
+            className="navbar navbar-expand navbar-light bg-primary sticky-top"
+          >
+            <ForwardRef(Bootstrap(Container))
+              className="header"
+            >
+              <Container
+                as="div"
+                bsPrefix="container"
+                className="header"
+                fluid={false}
+              >
+                <div
+                  className="header container"
+                >
+                  <ForwardRef(Bootstrap(NavbarBrand))>
+                    <NavbarBrand
+                      bsPrefix="navbar-brand"
+                    >
+                      <span
+                        className="navbar-brand"
+                      >
+                        Git Cheatsheet
+                      </span>
+                    </NavbarBrand>
+                  </ForwardRef(Bootstrap(NavbarBrand))>
+                </div>
+              </Container>
+            </ForwardRef(Bootstrap(Container))>
+          </nav>
+        </Navbar>
+      </Uncontrolled(Navbar)>
+    </ForwardRef>
+  </ForwardRef(Bootstrap(undefined))>
+</AppHeader>
+`;
+
+exports[`AppHeader renders correctly 2`] = `
+<AppHeader
+  prop="value"
+>
+  <ForwardRef(Bootstrap(undefined))
+    bg="primary"
+    sticky="top"
+  >
+    <ForwardRef
+      bg="primary"
+      bsPrefix="navbar"
+      innerRef={null}
+      sticky="top"
+    >
+      <Uncontrolled(Navbar)
+        bg="primary"
+        bsPrefix="navbar"
+        innerRef={null}
+        sticky="top"
+      >
+        <Navbar
+          as="nav"
+          bg="primary"
+          bsPrefix="navbar"
+          collapseOnSelect={false}
+          expand={true}
+          onToggle={[Function]}
+          sticky="top"
+          variant="light"
+        >
+          <nav
+            className="navbar navbar-expand navbar-light bg-primary sticky-top"
+          >
+            <ForwardRef(Bootstrap(Container))
+              className="header"
+            >
+              <Container
+                as="div"
+                bsPrefix="container"
+                className="header"
+                fluid={false}
+              >
+                <div
+                  className="header container"
+                >
+                  <ForwardRef(Bootstrap(NavbarBrand))>
+                    <NavbarBrand
+                      bsPrefix="navbar-brand"
+                    >
+                      <span
+                        className="navbar-brand"
+                      >
+                        Git Cheatsheet
+                      </span>
+                    </NavbarBrand>
+                  </ForwardRef(Bootstrap(NavbarBrand))>
+                </div>
+              </Container>
+            </ForwardRef(Bootstrap(Container))>
+          </nav>
+        </Navbar>
+      </Uncontrolled(Navbar)>
+    </ForwardRef>
+  </ForwardRef(Bootstrap(undefined))>
+</AppHeader>
+`;
