@@ -19,7 +19,11 @@
     "why-did-you-update": "^1.0.6"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
+    "@types/enzyme": "^3.9.0",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
     "source-map-explorer": "^1.8.0",
     "tslint": "^5.13.1",
     "tslint-react": "^3.6.0"
@@ -27,14 +31,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage",
-
     "lint": "tslint 'src/**/*.{ts,tsx}'",
-
     "all": "npm-run-all coverage lint build",
-
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "browserslist": [
@@ -42,5 +42,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  }
 }
