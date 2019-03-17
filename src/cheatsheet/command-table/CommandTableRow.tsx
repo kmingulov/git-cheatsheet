@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import React, { PureComponent, ReactElement } from 'react';
 
 import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
@@ -43,7 +43,7 @@ interface CommandTableRowProps {
   command: Command;
 }
 
-export class CommandTableRow extends Component<CommandTableRowProps> {
+export class CommandTableRow extends PureComponent<CommandTableRowProps> {
   public render(): ReactElement {
     const { command } = this.props;
 
