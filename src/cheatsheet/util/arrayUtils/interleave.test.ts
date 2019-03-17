@@ -1,4 +1,4 @@
-import { interleave } from './ArrayUtils';
+import { interleave } from './interleave';
 
 describe(interleave, () => {
   it('doesn\'t change empty array', () => {
