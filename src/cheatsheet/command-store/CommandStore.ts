@@ -1,7 +1,7 @@
 import { Builder, Index, PipelineFunction, Query } from 'lunr';
 
 import { Command, CommandGroup } from 'cheatsheet/command';
-import { CommandHighlighter } from './CommandHighlighter';
+import { highlightAll } from './highlight';
 import { SearchableCommand } from './SearchableCommand';
 
 const IGNORED_TOKEN_CHARS = /\W+/;
@@ -78,7 +78,7 @@ export class CommandStore {
       q.term(terms, { usePipeline: false, editDistance: 1, boost: 1 });
     });
 
-    return CommandHighlighter.highlightAll(
+    return highlightAll(
       results.map(searchResult => this.commandById[searchResult.ref]),
       terms,
     );
