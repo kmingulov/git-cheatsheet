@@ -1,4 +1,4 @@
-import { Builder, Index, PipelineFunction, Query } from 'lunr';
+import { Builder, Index, Pipeline, PipelineFunction, Query } from 'lunr';
 
 import { Command, CommandGroup } from 'cheatsheet/command';
 
@@ -27,6 +27,7 @@ const getCommandByIdHash = (commands: Command[]): CommandByIdHash => {
 
 const trimWord = (word: string): string => word.replace(IGNORED_TOKEN_CHARS, '');
 const trimToken: PipelineFunction = token => token.update(trimWord);
+Pipeline.registerFunction(trimToken, 'trimToken');
 
 const buildSearchIndex = (commands: Command[]): Index => {
   const builder = new Builder();
