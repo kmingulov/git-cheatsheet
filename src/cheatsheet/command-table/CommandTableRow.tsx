@@ -2,27 +2,15 @@ import React, { Component, ReactElement } from 'react';
 
 import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
-const renderPart = (part: CommandPart, insertSpaces: boolean, key: any): ReactElement | string => {
+const renderPart = (part: CommandPart, key: any): ReactElement | string => {
   if (part.role === CommandPartType.NONE) {
-    return (insertSpaces ? ' ' : '') + part.text;
+    return part.text;
   }
 
   const className: string = 'git-' + part.role.toString().toLocaleLowerCase();
-
-  if (!insertSpaces) {
-    return (
-      <span className={ className } key={ key }>
-        { part.text }
-      </span>
-    );
-  }
-
   return (
-    <span key={ key }>
-      { ' ' }
-      <span className={ className }>
-        { part.text }
-      </span>
+    <span className={ className } key={ key }>
+      { part.text }
     </span>
   );
 };
@@ -31,7 +19,8 @@ const renderCommand = (command: Command): ReactElement => {
   const renderedCommand = (
     <span>
       <span className='git'>git</span>
-      { command.command.map((part, i) => renderPart(part, true, i)) }
+      { ' ' }
+      { command.command.map(renderPart) }
     </span>
   );
 
@@ -44,7 +33,7 @@ const renderCommand = (command: Command): ReactElement => {
       { renderedCommand }
       <br/>
       <small>
-        { command.scmBreezeShortcut.map((part, i) => renderPart(part, true, i)) }
+        { command.scmBreezeShortcut.map(renderPart) }
       </small>
     </span>
   );
@@ -64,7 +53,7 @@ export class CommandTableRow extends Component<CommandTableRowProps> {
           { renderCommand(command) }
         </td>
         <td>
-          { command.description.map((part, i) => renderPart(part, false, i)) }
+          { command.description.map(renderPart) }
         </td>
       </tr>
     );
