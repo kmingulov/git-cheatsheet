@@ -2,6 +2,7 @@ import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
 const highlightPart = (part: CommandPart, regexp: RegExp): CommandPart[] =>
   part.text.split(regexp)
+    .filter(text => text !== '')
     .map(item =>
       item.match(regexp)
         ? new CommandPart(CommandPartType.HIGHLIGHT, item)
