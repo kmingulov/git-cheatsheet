@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommandPage allows searching 1`] = `
+<CommandPage>
+  <div>
+    <staticComponent()
+      className="searchBox"
+    >
+      <ForwardRef(Bootstrap(InputGroup))
+        className="searchBox"
+      >
+        <InputGroup
+          as="div"
+          bsPrefix="input-group"
+          className="searchBox"
+        >
+          <div
+            className="searchBox input-group"
+          >
+            <ForwardRef(Bootstrap(InputGroupPrepend))>
+              <InputGroupPrepend
+                bsPrefix="input-group-prepend"
+              >
+                <div
+                  className="input-group-prepend"
+                >
+                  <ForwardRef(Bootstrap(InputGroupText))>
+                    <InputGroupText
+                      bsPrefix="input-group-text"
+                    >
+                      <span
+                        className="input-group-text"
+                      >
+                        <MdSearch>
+                          <div />
+                        </MdSearch>
+                      </span>
+                    </InputGroupText>
+                  </ForwardRef(Bootstrap(InputGroupText))>
+                </div>
+              </InputGroupPrepend>
+            </ForwardRef(Bootstrap(InputGroupPrepend))>
+            <ForwardRef(ContextTransform)
+              onChange={[Function]}
+              placeholder="Search…"
+            >
+              <ForwardRef(Bootstrap(FormControl))
+                onChange={[Function]}
+                placeholder="Search…"
+              >
+                <FormControl
+                  as="input"
+                  bsPrefix="form-control"
+                  inputRef={null}
+                  onChange={[Function]}
+                  placeholder="Search…"
+                >
+                  <input
+                    className="form-control"
+                    onChange={[Function]}
+                    placeholder="Search…"
+                  />
+                </FormControl>
+              </ForwardRef(Bootstrap(FormControl))>
+            </ForwardRef(ContextTransform)>
+            <ForwardRef(Bootstrap(InputGroupAppend))>
+              <InputGroupAppend
+                bsPrefix="input-group-append"
+              >
+                <div
+                  className="input-group-append"
+                >
+                  <ForwardRef(Bootstrap(Button))
+                    onClick={[Function]}
+                    variant="secondary"
+                  >
+                    <Button
+                      active={false}
+                      bsPrefix="btn"
+                      disabled={false}
+                      innerRef={null}
+                      onClick={[Function]}
+                      type="button"
+                      variant="secondary"
+                    >
+                      <button
+                        className="btn btn-secondary"
+                        disabled={false}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <MdClear>
+                          <div />
+                        </MdClear>
+                      </button>
+                    </Button>
+                  </ForwardRef(Bootstrap(Button))>
+                </div>
+              </InputGroupAppend>
+            </ForwardRef(Bootstrap(InputGroupAppend))>
+          </div>
+        </InputGroup>
+      </ForwardRef(Bootstrap(InputGroup))>
+    </staticComponent()>
+    <CommandTable
+      searchTerm=""
+      store={
+        LunrCommandStore {
+          "getAll": [MockFunction],
+          "search": [MockFunction],
+        }
+      }
+    />
+  </div>
+</CommandPage>
+`;
+
+exports[`CommandPage allows searching 2`] = `
+<CommandPage>
+  <div>
+    <staticComponent()
+      className="searchBox"
+    >
+      <ForwardRef(Bootstrap(InputGroup))
+        className="searchBox"
+      >
+        <InputGroup
+          as="div"
+          bsPrefix="input-group"
+          className="searchBox"
+        >
+          <div
+            className="searchBox input-group"
+          >
+            <ForwardRef(Bootstrap(InputGroupPrepend))>
+              <InputGroupPrepend
+                bsPrefix="input-group-prepend"
+              >
+                <div
+                  className="input-group-prepend"
+                >
+                  <ForwardRef(Bootstrap(InputGroupText))>
+                    <InputGroupText
+                      bsPrefix="input-group-text"
+                    >
+                      <span
+                        className="input-group-text"
+                      >
+                        <MdSearch>
+                          <div />
+                        </MdSearch>
+                      </span>
+                    </InputGroupText>
+                  </ForwardRef(Bootstrap(InputGroupText))>
+                </div>
+              </InputGroupPrepend>
+            </ForwardRef(Bootstrap(InputGroupPrepend))>
+            <ForwardRef(ContextTransform)
+              onChange={[Function]}
+              placeholder="Search…"
+            >
+              <ForwardRef(Bootstrap(FormControl))
+                onChange={[Function]}
+                placeholder="Search…"
+              >
+                <FormControl
+                  as="input"
+                  bsPrefix="form-control"
+                  inputRef={null}
+                  onChange={[Function]}
+                  placeholder="Search…"
+                >
+                  <input
+                    className="form-control"
+                    onChange={[Function]}
+                    placeholder="Search…"
+                  />
+                </FormControl>
+              </ForwardRef(Bootstrap(FormControl))>
+            </ForwardRef(ContextTransform)>
+            <ForwardRef(Bootstrap(InputGroupAppend))>
+              <InputGroupAppend
+                bsPrefix="input-group-append"
+              >
+                <div
+                  className="input-group-append"
+                >
+                  <ForwardRef(Bootstrap(Button))
+                    onClick={[Function]}
+                    variant="secondary"
+                  >
+                    <Button
+                      active={false}
+                      bsPrefix="btn"
+                      disabled={false}
+                      innerRef={null}
+                      onClick={[Function]}
+                      type="button"
+                      variant="secondary"
+                    >
+                      <button
+                        className="btn btn-secondary"
+                        disabled={false}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <MdClear>
+                          <div />
+                        </MdClear>
+                      </button>
+                    </Button>
+                  </ForwardRef(Bootstrap(Button))>
+                </div>
+              </InputGroupAppend>
+            </ForwardRef(Bootstrap(InputGroupAppend))>
+          </div>
+        </InputGroup>
+      </ForwardRef(Bootstrap(InputGroup))>
+    </staticComponent()>
+    <CommandTable
+      searchTerm="search term"
+      store={
+        LunrCommandStore {
+          "getAll": [MockFunction],
+          "search": [MockFunction],
+        }
+      }
+    />
+  </div>
+</CommandPage>
+`;
+
+exports[`CommandPage allows searching 3`] = `
+<CommandPage>
+  <div>
+    <staticComponent()
+      className="searchBox"
+    >
+      <ForwardRef(Bootstrap(InputGroup))
+        className="searchBox"
+      >
+        <InputGroup
+          as="div"
+          bsPrefix="input-group"
+          className="searchBox"
+        >
+          <div
+            className="searchBox input-group"
+          >
+            <ForwardRef(Bootstrap(InputGroupPrepend))>
+              <InputGroupPrepend
+                bsPrefix="input-group-prepend"
+              >
+                <div
+                  className="input-group-prepend"
+                >
+                  <ForwardRef(Bootstrap(InputGroupText))>
+                    <InputGroupText
+                      bsPrefix="input-group-text"
+                    >
+                      <span
+                        className="input-group-text"
+                      >
+                        <MdSearch>
+                          <div />
+                        </MdSearch>
+                      </span>
+                    </InputGroupText>
+                  </ForwardRef(Bootstrap(InputGroupText))>
+                </div>
+              </InputGroupPrepend>
+            </ForwardRef(Bootstrap(InputGroupPrepend))>
+            <ForwardRef(ContextTransform)
+              onChange={[Function]}
+              placeholder="Search…"
+            >
+              <ForwardRef(Bootstrap(FormControl))
+                onChange={[Function]}
+                placeholder="Search…"
+              >
+                <FormControl
+                  as="input"
+                  bsPrefix="form-control"
+                  inputRef={null}
+                  onChange={[Function]}
+                  placeholder="Search…"
+                >
+                  <input
+                    className="form-control"
+                    onChange={[Function]}
+                    placeholder="Search…"
+                  />
+                </FormControl>
+              </ForwardRef(Bootstrap(FormControl))>
+            </ForwardRef(ContextTransform)>
+            <ForwardRef(Bootstrap(InputGroupAppend))>
+              <InputGroupAppend
+                bsPrefix="input-group-append"
+              >
+                <div
+                  className="input-group-append"
+                >
+                  <ForwardRef(Bootstrap(Button))
+                    onClick={[Function]}
+                    variant="secondary"
+                  >
+                    <Button
+                      active={false}
+                      bsPrefix="btn"
+                      disabled={false}
+                      innerRef={null}
+                      onClick={[Function]}
+                      type="button"
+                      variant="secondary"
+                    >
+                      <button
+                        className="btn btn-secondary"
+                        disabled={false}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <MdClear>
+                          <div />
+                        </MdClear>
+                      </button>
+                    </Button>
+                  </ForwardRef(Bootstrap(Button))>
+                </div>
+              </InputGroupAppend>
+            </ForwardRef(Bootstrap(InputGroupAppend))>
+          </div>
+        </InputGroup>
+      </ForwardRef(Bootstrap(InputGroup))>
+    </staticComponent()>
+    <CommandTable
+      searchTerm=""
+      store={
+        LunrCommandStore {
+          "getAll": [MockFunction],
+          "search": [MockFunction],
+        }
+      }
+    />
+  </div>
+</CommandPage>
+`;
+
+exports[`CommandPage renders correctly 1`] = `
+<CommandPage>
+  <div>
+    <staticComponent()
+      className="searchBox"
+    >
+      <ForwardRef(Bootstrap(InputGroup))
+        className="searchBox"
+      >
+        <InputGroup
+          as="div"
+          bsPrefix="input-group"
+          className="searchBox"
+        >
+          <div
+            className="searchBox input-group"
+          >
+            <ForwardRef(Bootstrap(InputGroupPrepend))>
+              <InputGroupPrepend
+                bsPrefix="input-group-prepend"
+              >
+                <div
+                  className="input-group-prepend"
+                >
+                  <ForwardRef(Bootstrap(InputGroupText))>
+                    <InputGroupText
+                      bsPrefix="input-group-text"
+                    >
+                      <span
+                        className="input-group-text"
+                      >
+                        <MdSearch>
+                          <div />
+                        </MdSearch>
+                      </span>
+                    </InputGroupText>
+                  </ForwardRef(Bootstrap(InputGroupText))>
+                </div>
+              </InputGroupPrepend>
+            </ForwardRef(Bootstrap(InputGroupPrepend))>
+            <ForwardRef(ContextTransform)
+              onChange={[Function]}
+              placeholder="Search…"
+            >
+              <ForwardRef(Bootstrap(FormControl))
+                onChange={[Function]}
+                placeholder="Search…"
+              >
+                <FormControl
+                  as="input"
+                  bsPrefix="form-control"
+                  inputRef={null}
+                  onChange={[Function]}
+                  placeholder="Search…"
+                >
+                  <input
+                    className="form-control"
+                    onChange={[Function]}
+                    placeholder="Search…"
+                  />
+                </FormControl>
+              </ForwardRef(Bootstrap(FormControl))>
+            </ForwardRef(ContextTransform)>
+            <ForwardRef(Bootstrap(InputGroupAppend))>
+              <InputGroupAppend
+                bsPrefix="input-group-append"
+              >
+                <div
+                  className="input-group-append"
+                >
+                  <ForwardRef(Bootstrap(Button))
+                    onClick={[Function]}
+                    variant="secondary"
+                  >
+                    <Button
+                      active={false}
+                      bsPrefix="btn"
+                      disabled={false}
+                      innerRef={null}
+                      onClick={[Function]}
+                      type="button"
+                      variant="secondary"
+                    >
+                      <button
+                        className="btn btn-secondary"
+                        disabled={false}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <MdClear>
+                          <div />
+                        </MdClear>
+                      </button>
+                    </Button>
+                  </ForwardRef(Bootstrap(Button))>
+                </div>
+              </InputGroupAppend>
+            </ForwardRef(Bootstrap(InputGroupAppend))>
+          </div>
+        </InputGroup>
+      </ForwardRef(Bootstrap(InputGroup))>
+    </staticComponent()>
+    <CommandTable
+      searchTerm=""
+      store={
+        LunrCommandStore {
+          "getAll": [MockFunction],
+          "search": [MockFunction],
+        }
+      }
+    />
+  </div>
+</CommandPage>
+`;
