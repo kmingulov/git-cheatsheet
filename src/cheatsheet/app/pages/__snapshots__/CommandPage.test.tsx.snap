@@ -3,20 +3,18 @@
 exports[`CommandPage allows searching 1`] = `
 <CommandPage>
   <div>
-    <staticComponent()
+    <ForwardRef(Bootstrap(InputGroup))
       className="searchBox"
     >
-      <ForwardRef(Bootstrap(InputGroup))
+      <InputGroup
+        as="div"
+        bsPrefix="input-group"
         className="searchBox"
       >
-        <InputGroup
-          as="div"
-          bsPrefix="input-group"
-          className="searchBox"
+        <div
+          className="searchBox input-group"
         >
-          <div
-            className="searchBox input-group"
-          >
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupPrepend))>
               <InputGroupPrepend
                 bsPrefix="input-group-prepend"
@@ -40,29 +38,35 @@ exports[`CommandPage allows searching 1`] = `
                 </div>
               </InputGroupPrepend>
             </ForwardRef(Bootstrap(InputGroupPrepend))>
-            <ForwardRef(ContextTransform)
+          </staticComponent()>
+          <ForwardRef(ContextTransform)
+            onChange={[Function]}
+            placeholder="Search…"
+            value=""
+          >
+            <ForwardRef(Bootstrap(FormControl))
               onChange={[Function]}
               placeholder="Search…"
+              value=""
             >
-              <ForwardRef(Bootstrap(FormControl))
+              <FormControl
+                as="input"
+                bsPrefix="form-control"
+                inputRef={null}
                 onChange={[Function]}
                 placeholder="Search…"
+                value=""
               >
-                <FormControl
-                  as="input"
-                  bsPrefix="form-control"
-                  inputRef={null}
+                <input
+                  className="form-control"
                   onChange={[Function]}
                   placeholder="Search…"
-                >
-                  <input
-                    className="form-control"
-                    onChange={[Function]}
-                    placeholder="Search…"
-                  />
-                </FormControl>
-              </ForwardRef(Bootstrap(FormControl))>
-            </ForwardRef(ContextTransform)>
+                  value=""
+                />
+              </FormControl>
+            </ForwardRef(Bootstrap(FormControl))>
+          </ForwardRef(ContextTransform)>
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupAppend))>
               <InputGroupAppend
                 bsPrefix="input-group-append"
@@ -98,10 +102,10 @@ exports[`CommandPage allows searching 1`] = `
                 </div>
               </InputGroupAppend>
             </ForwardRef(Bootstrap(InputGroupAppend))>
-          </div>
-        </InputGroup>
-      </ForwardRef(Bootstrap(InputGroup))>
-    </staticComponent()>
+          </staticComponent()>
+        </div>
+      </InputGroup>
+    </ForwardRef(Bootstrap(InputGroup))>
     <CommandTable
       searchTerm=""
       store={
@@ -118,20 +122,18 @@ exports[`CommandPage allows searching 1`] = `
 exports[`CommandPage allows searching 2`] = `
 <CommandPage>
   <div>
-    <staticComponent()
+    <ForwardRef(Bootstrap(InputGroup))
       className="searchBox"
     >
-      <ForwardRef(Bootstrap(InputGroup))
+      <InputGroup
+        as="div"
+        bsPrefix="input-group"
         className="searchBox"
       >
-        <InputGroup
-          as="div"
-          bsPrefix="input-group"
-          className="searchBox"
+        <div
+          className="searchBox input-group"
         >
-          <div
-            className="searchBox input-group"
-          >
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupPrepend))>
               <InputGroupPrepend
                 bsPrefix="input-group-prepend"
@@ -155,29 +157,35 @@ exports[`CommandPage allows searching 2`] = `
                 </div>
               </InputGroupPrepend>
             </ForwardRef(Bootstrap(InputGroupPrepend))>
-            <ForwardRef(ContextTransform)
+          </staticComponent()>
+          <ForwardRef(ContextTransform)
+            onChange={[Function]}
+            placeholder="Search…"
+            value="search term"
+          >
+            <ForwardRef(Bootstrap(FormControl))
               onChange={[Function]}
               placeholder="Search…"
+              value="search term"
             >
-              <ForwardRef(Bootstrap(FormControl))
+              <FormControl
+                as="input"
+                bsPrefix="form-control"
+                inputRef={null}
                 onChange={[Function]}
                 placeholder="Search…"
+                value="search term"
               >
-                <FormControl
-                  as="input"
-                  bsPrefix="form-control"
-                  inputRef={null}
+                <input
+                  className="form-control"
                   onChange={[Function]}
                   placeholder="Search…"
-                >
-                  <input
-                    className="form-control"
-                    onChange={[Function]}
-                    placeholder="Search…"
-                  />
-                </FormControl>
-              </ForwardRef(Bootstrap(FormControl))>
-            </ForwardRef(ContextTransform)>
+                  value="search term"
+                />
+              </FormControl>
+            </ForwardRef(Bootstrap(FormControl))>
+          </ForwardRef(ContextTransform)>
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupAppend))>
               <InputGroupAppend
                 bsPrefix="input-group-append"
@@ -213,10 +221,10 @@ exports[`CommandPage allows searching 2`] = `
                 </div>
               </InputGroupAppend>
             </ForwardRef(Bootstrap(InputGroupAppend))>
-          </div>
-        </InputGroup>
-      </ForwardRef(Bootstrap(InputGroup))>
-    </staticComponent()>
+          </staticComponent()>
+        </div>
+      </InputGroup>
+    </ForwardRef(Bootstrap(InputGroup))>
     <CommandTable
       searchTerm="search term"
       store={
@@ -233,20 +241,18 @@ exports[`CommandPage allows searching 2`] = `
 exports[`CommandPage allows searching 3`] = `
 <CommandPage>
   <div>
-    <staticComponent()
+    <ForwardRef(Bootstrap(InputGroup))
       className="searchBox"
     >
-      <ForwardRef(Bootstrap(InputGroup))
+      <InputGroup
+        as="div"
+        bsPrefix="input-group"
         className="searchBox"
       >
-        <InputGroup
-          as="div"
-          bsPrefix="input-group"
-          className="searchBox"
+        <div
+          className="searchBox input-group"
         >
-          <div
-            className="searchBox input-group"
-          >
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupPrepend))>
               <InputGroupPrepend
                 bsPrefix="input-group-prepend"
@@ -270,29 +276,35 @@ exports[`CommandPage allows searching 3`] = `
                 </div>
               </InputGroupPrepend>
             </ForwardRef(Bootstrap(InputGroupPrepend))>
-            <ForwardRef(ContextTransform)
+          </staticComponent()>
+          <ForwardRef(ContextTransform)
+            onChange={[Function]}
+            placeholder="Search…"
+            value=""
+          >
+            <ForwardRef(Bootstrap(FormControl))
               onChange={[Function]}
               placeholder="Search…"
+              value=""
             >
-              <ForwardRef(Bootstrap(FormControl))
+              <FormControl
+                as="input"
+                bsPrefix="form-control"
+                inputRef={null}
                 onChange={[Function]}
                 placeholder="Search…"
+                value=""
               >
-                <FormControl
-                  as="input"
-                  bsPrefix="form-control"
-                  inputRef={null}
+                <input
+                  className="form-control"
                   onChange={[Function]}
                   placeholder="Search…"
-                >
-                  <input
-                    className="form-control"
-                    onChange={[Function]}
-                    placeholder="Search…"
-                  />
-                </FormControl>
-              </ForwardRef(Bootstrap(FormControl))>
-            </ForwardRef(ContextTransform)>
+                  value=""
+                />
+              </FormControl>
+            </ForwardRef(Bootstrap(FormControl))>
+          </ForwardRef(ContextTransform)>
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupAppend))>
               <InputGroupAppend
                 bsPrefix="input-group-append"
@@ -328,10 +340,10 @@ exports[`CommandPage allows searching 3`] = `
                 </div>
               </InputGroupAppend>
             </ForwardRef(Bootstrap(InputGroupAppend))>
-          </div>
-        </InputGroup>
-      </ForwardRef(Bootstrap(InputGroup))>
-    </staticComponent()>
+          </staticComponent()>
+        </div>
+      </InputGroup>
+    </ForwardRef(Bootstrap(InputGroup))>
     <CommandTable
       searchTerm=""
       store={
@@ -348,20 +360,18 @@ exports[`CommandPage allows searching 3`] = `
 exports[`CommandPage renders correctly 1`] = `
 <CommandPage>
   <div>
-    <staticComponent()
+    <ForwardRef(Bootstrap(InputGroup))
       className="searchBox"
     >
-      <ForwardRef(Bootstrap(InputGroup))
+      <InputGroup
+        as="div"
+        bsPrefix="input-group"
         className="searchBox"
       >
-        <InputGroup
-          as="div"
-          bsPrefix="input-group"
-          className="searchBox"
+        <div
+          className="searchBox input-group"
         >
-          <div
-            className="searchBox input-group"
-          >
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupPrepend))>
               <InputGroupPrepend
                 bsPrefix="input-group-prepend"
@@ -385,29 +395,35 @@ exports[`CommandPage renders correctly 1`] = `
                 </div>
               </InputGroupPrepend>
             </ForwardRef(Bootstrap(InputGroupPrepend))>
-            <ForwardRef(ContextTransform)
+          </staticComponent()>
+          <ForwardRef(ContextTransform)
+            onChange={[Function]}
+            placeholder="Search…"
+            value=""
+          >
+            <ForwardRef(Bootstrap(FormControl))
               onChange={[Function]}
               placeholder="Search…"
+              value=""
             >
-              <ForwardRef(Bootstrap(FormControl))
+              <FormControl
+                as="input"
+                bsPrefix="form-control"
+                inputRef={null}
                 onChange={[Function]}
                 placeholder="Search…"
+                value=""
               >
-                <FormControl
-                  as="input"
-                  bsPrefix="form-control"
-                  inputRef={null}
+                <input
+                  className="form-control"
                   onChange={[Function]}
                   placeholder="Search…"
-                >
-                  <input
-                    className="form-control"
-                    onChange={[Function]}
-                    placeholder="Search…"
-                  />
-                </FormControl>
-              </ForwardRef(Bootstrap(FormControl))>
-            </ForwardRef(ContextTransform)>
+                  value=""
+                />
+              </FormControl>
+            </ForwardRef(Bootstrap(FormControl))>
+          </ForwardRef(ContextTransform)>
+          <staticComponent()>
             <ForwardRef(Bootstrap(InputGroupAppend))>
               <InputGroupAppend
                 bsPrefix="input-group-append"
@@ -443,10 +459,10 @@ exports[`CommandPage renders correctly 1`] = `
                 </div>
               </InputGroupAppend>
             </ForwardRef(Bootstrap(InputGroupAppend))>
-          </div>
-        </InputGroup>
-      </ForwardRef(Bootstrap(InputGroup))>
-    </staticComponent()>
+          </staticComponent()>
+        </div>
+      </InputGroup>
+    </ForwardRef(Bootstrap(InputGroup))>
     <CommandTable
       searchTerm=""
       store={
