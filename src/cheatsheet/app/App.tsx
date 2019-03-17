@@ -2,10 +2,10 @@ import React, { Component, ReactElement } from 'react';
 import { Container, FormControl, InputGroup, Navbar } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
 
-import { CommandStore } from './command-store';
-import { CommandTable } from './command-table';
+import { CommandStore } from 'cheatsheet/command-store';
+import { CommandTable } from 'cheatsheet/command-table';
 
-import commands from './command-data/commands';
+import commands from 'cheatsheet/command-data/commands';
 
 import './App.css';
 

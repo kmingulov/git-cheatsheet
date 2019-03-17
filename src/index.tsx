@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import 'bootswatch/dist/darkly/bootstrap.min.css';
 
-import App from './cheatsheet/App';
+import App from './cheatsheet/app/App';
 import './index.css';
 
 if (process.env.NODE_ENV !== 'production') {
