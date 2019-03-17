@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommandTable renders found commands when searchTerm is present 1`] = `
+<CommandTable
+  searchTerm="search"
+  store={
+    CommandStoreStub {
+      "getAll": [MockFunction],
+      "search": [MockFunction] {
+        "calls": Array [
+          Array [
+            "search",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Array [
+              Command {
+                "command": Array [],
+                "description": Array [],
+                "id": "cmd-1",
+                "scmBreezeShortcut": Array [],
+              },
+            ],
+          },
+        ],
+      },
+    }
+  }
+>
+  <div>
+    <CommandGroupTable
+      group={
+        CommandGroup {
+          "commands": Array [
+            Command {
+              "command": Array [],
+              "description": Array [],
+              "id": "cmd-1",
+              "scmBreezeShortcut": Array [],
+            },
+          ],
+          "title": "Search Results",
+        }
+      }
+      key="Search Results"
+    />
+  </div>
+</CommandTable>
+`;
+
+exports[`CommandTable renders full list of commands when searchTerm isn't present 1`] = `
+<CommandTable
+  store={
+    CommandStoreStub {
+      "getAll": [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Array [
+              CommandGroup {
+                "commands": Array [],
+                "title": "Basic Commands",
+              },
+              CommandGroup {
+                "commands": Array [],
+                "title": "Advanced Commands",
+              },
+            ],
+          },
+        ],
+      },
+      "search": [MockFunction],
+    }
+  }
+>
+  <div>
+    <CommandGroupTable
+      group={
+        CommandGroup {
+          "commands": Array [],
+          "title": "Basic Commands",
+        }
+      }
+      key="Basic Commands"
+    />
+    <CommandGroupTable
+      group={
+        CommandGroup {
+          "commands": Array [],
+          "title": "Advanced Commands",
+        }
+      }
+      key="Advanced Commands"
+    />
+  </div>
+</CommandTable>
+`;
