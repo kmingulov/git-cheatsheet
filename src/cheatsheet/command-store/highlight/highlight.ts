@@ -22,7 +22,3 @@ export const highlight = (command: Command, terms: string[]): Command => {
 
   return new Command(command.id, highlightedCommand, highlightedDescription, highlightedShortcut);
 };
-
-export const highlightAll = (commands: Command[], terms: string[]): Command[] => {
-  return commands.map(command => highlight(command, terms));
-};
