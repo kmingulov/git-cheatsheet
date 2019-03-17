@@ -1,6 +1,6 @@
 import { Command, command, CommandGroup, highlight, none } from 'cheatsheet/command';
 
-import { CommandStore } from './CommandStore';
+import { LunrCommandStore } from './LunrCommandStore';
 
 const commitCommand = new Command(
   'cmd-1',
@@ -44,8 +44,8 @@ const highlightedLogCommand = new Command(
 const commitGroup = new CommandGroup('Commit', [ commitCommand, commitMessageCommand ]);
 const logGroup = new CommandGroup('Log', [ logCommand ]);
 
-describe(CommandStore, () => {
-  const store = new CommandStore([ commitGroup, logGroup ]);
+describe(LunrCommandStore, () => {
+  const store = new LunrCommandStore([ commitGroup, logGroup ]);
 
   it('returns all commands', () => {
     const groups = store.getAll();

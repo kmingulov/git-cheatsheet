@@ -1,4 +1,4 @@
-import { Command, command, CommandPart, highlight, none } from 'cheatsheet/command';
+import { Command, command, highlight, none } from 'cheatsheet/command';
 
 import { highlightAll } from './highlightAll';
 

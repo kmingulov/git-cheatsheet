@@ -3,11 +3,11 @@ import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import { MdClear, MdSearch } from 'react-icons/md';
 
 import commands from 'cheatsheet/command-data/commands';
-import { CommandStore } from 'cheatsheet/command-store';
+import { LunrCommandStore } from 'cheatsheet/command-store';
 import { CommandTable } from 'cheatsheet/command-table';
 import { staticComponent } from 'cheatsheet/util/componentUtils';
 
-const store = new CommandStore(commands);
+const store = new LunrCommandStore(commands);
 
 type State = Readonly<{ searchTerm: string }>;
 
