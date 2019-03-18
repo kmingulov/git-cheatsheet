@@ -1,44 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Git Cheatsheet
 
-## Available Scripts
+[![Build Status](https://api.travis-ci.org/kmingulov/git-cheatsheet.svg?branch=master)](https://travis-ci.org/kmingulov/git-cheatsheet)
+[![Code Coverage](https://codecov.io/gh/kmingulov/git-cheatsheet/branch/master/graph/badge.svg)](https://codecov.io/gh/kmingulov/git-cheatsheet/)
 
-In the project directory, you can run:
+Interactive comprehensive cheatsheet for the popular version control system [Git](https://git-scm.com/).
 
-### `npm start`
+**Note.** Work on this project is currently in progress, and not all planned Git commands are added to the cheatsheet.
+Star the repo and stay tuned for the updates!
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Build & Run
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Make sure you have [node](https://nodejs.org) installed.
+Then clone the repo and install all dependencies:
 
-### `npm test`
+```shell
+git clone https://github.com/kmingulov/git-cheatsheet.git
+cd git-cheatsheet
+npm install
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Production build
 
-### `npm run build`
+To run the cheatsheet in **production** mode, install `serve` (`npm install serve -g`) and run:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```shell
+npm run build
+serve -s build
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The cheatsheet will be accessible under [http://localhost:5000]().
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development build
 
-### `npm run eject`
+To run the cheatsheet in **development** mode, simply execute:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```shell
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The cheatsheet will be available under [http://localhost:3000]().
+If you make any changes to the code, it will be recompiled and the server will be restarted.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Submitting a PR
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you think Git Cheatsheet could be improved, fork the repo and submit a pull-request!
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Please note that we use [Travis](https://travis-ci.org/kmingulov/git-cheatsheet) and [Codecov](https://codecov.io/gh/kmingulov/git-cheatsheet/) to track build health.
+That said, please run `npm lint` and `npm test` to make sure that your changes follow our code style and don't break any tests.
