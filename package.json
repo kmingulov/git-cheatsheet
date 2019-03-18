@@ -31,7 +31,8 @@
     "react-test-renderer": "^16.8.4",
     "source-map-explorer": "^1.8.0",
     "tslint": "^5.13.1",
-    "tslint-react": "^3.6.0"
+    "tslint-react": "^3.6.0",
+    "typedoc": "^0.14.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,6 +40,7 @@
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "doc": "typedoc --options typedoc.js --json docs/tsdoc.json",
     "all": "npm-run-all coverage lint build",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
