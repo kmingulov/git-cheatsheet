@@ -1,5 +1,6 @@
 jest.mock('react-dom');
-jest.mock('cheatsheet/App');
+
+jest.mock('./cheatsheet/App');
 
 describe('index', () => {
   let root: HTMLDivElement;
