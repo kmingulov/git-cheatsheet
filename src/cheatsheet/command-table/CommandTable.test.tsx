@@ -18,7 +18,7 @@ class CommandStoreStub implements CommandStore {
       new CommandGroup('Advanced Commands', []),
     ];
   }
-  public search(searchTerm: string): Command[] {
+  public search(searchTerm: string): ReadonlyArray<Command> {
     return [ new Command('cmd-1', [], []) ];
   }
 }

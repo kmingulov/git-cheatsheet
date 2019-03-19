@@ -8,7 +8,7 @@ import { SearchableCommand } from './SearchableCommand';
 
 const IGNORED_TOKEN_CHARS = /\W+/;
 
-const getAllCommands = (groups: CommandGroup[]): Command[] => {
+const getAllCommands = (groups: CommandGroup[]): ReadonlyArray<Command> => {
   return groups
     .map(group => group.commands)
     .reduce((a, b) => a.concat(b), []);
@@ -18,7 +18,7 @@ interface CommandByIdHash {
   [ id: string ]: Command;
 }
 
-const getCommandByIdHash = (commands: Command[]): CommandByIdHash => {
+const getCommandByIdHash = (commands: ReadonlyArray<Command>): CommandByIdHash => {
   return commands.reduce((hash, cmd) => {
     hash[cmd.id] = cmd;
     return hash;
@@ -29,7 +29,7 @@ const trimWord = (word: string): string => word.replace(IGNORED_TOKEN_CHARS, '')
 const trimToken: PipelineFunction = token => token.update(trimWord);
 Pipeline.registerFunction(trimToken, 'trimToken');
 
-const buildSearchIndex = (commands: Command[]): Index => {
+const buildSearchIndex = (commands: ReadonlyArray<Command>): Index => {
   const builder = new Builder();
 
   builder.ref('id');
@@ -65,7 +65,7 @@ export class LunrCommandStore implements CommandStore {
     return this.commandGroups;
   }
 
-  public search(searchQuery: string): Command[] {
+  public search(searchQuery: string): ReadonlyArray<Command> {
     const terms = searchQuery
       .split(IGNORED_TOKEN_CHARS)
       .map(trimWord)
