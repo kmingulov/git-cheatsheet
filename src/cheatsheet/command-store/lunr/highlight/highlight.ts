@@ -1,6 +1,6 @@
 import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
-const highlightPart = (part: CommandPart, regexp: RegExp): CommandPart[] =>
+const highlightPart = (part: CommandPart, regexp: RegExp): ReadonlyArray<CommandPart> =>
   part.text.split(regexp)
     .filter(text => text !== '')
     .map(item =>
@@ -9,7 +9,7 @@ const highlightPart = (part: CommandPart, regexp: RegExp): CommandPart[] =>
         : new CommandPart(part.role, item),
     );
 
-const highlightParts = (parts: CommandPart[], regexp: RegExp): CommandPart[] =>
+const highlightParts = (parts: ReadonlyArray<CommandPart>, regexp: RegExp): ReadonlyArray<CommandPart> =>
   parts
     .map(part => highlightPart(part, regexp))
     .reduce((theseParts, otherParts) => theseParts.concat(otherParts), []);

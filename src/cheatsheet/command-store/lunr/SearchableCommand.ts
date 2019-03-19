@@ -1,6 +1,6 @@
 import { Command, CommandPart } from 'cheatsheet/command';
 
-const partsToString = (parts: CommandPart[]): string =>
+const partsToString = (parts: ReadonlyArray<CommandPart>): string =>
   parts.map(part => part.text).join('');
 
 export class SearchableCommand {

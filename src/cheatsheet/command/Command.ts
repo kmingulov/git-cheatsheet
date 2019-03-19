@@ -1,6 +1,6 @@
 import { CommandPart, none } from './CommandPart';
 
-const partStringArrayToPartArray = (array: Array<CommandPart | string>): CommandPart[] =>
+const partStringArrayToPartArray = (array: ReadonlyArray<CommandPart | string>): ReadonlyArray<CommandPart> =>
   array.map(item => typeof(item) === 'string' ? none(item) : item);
 
 /**
@@ -11,11 +11,11 @@ export class Command {
   /** Unique ID. */
   public readonly id: string;
   /** Command itself represented as an array of {@link CommandPart}s. */
-  public readonly command: CommandPart[];
+  public readonly command: ReadonlyArray<CommandPart>;
   /** Command's description represented as an array of {@link CommandPart}s. */
-  public readonly description: CommandPart[];
+  public readonly description: ReadonlyArray<CommandPart>;
   /** SCM Breeze shortcut for this command represented as an array of {@link CommandPart}s. */
-  public readonly scmBreezeShortcut: CommandPart[];
+  public readonly scmBreezeShortcut: ReadonlyArray<CommandPart>;
 
   /**
    * Constructs a new {@link Command}. Command itself, its description and shortcut are represented by arrays of
@@ -26,9 +26,9 @@ export class Command {
    * @param scmBreezeShortcut SCM Breeze shortcut represented as an array
    */
   constructor(id: string,
-              commandParts: Array<CommandPart | string>,
-              descriptionParts: Array<CommandPart | string>,
-              scmBreezeShortcut?: Array<CommandPart | string>) {
+              commandParts: ReadonlyArray<CommandPart | string>,
+              descriptionParts: ReadonlyArray<CommandPart | string>,
+              scmBreezeShortcut?: ReadonlyArray<CommandPart | string>) {
     this.id = id;
     this.command = partStringArrayToPartArray(commandParts);
     this.description = partStringArrayToPartArray(descriptionParts);

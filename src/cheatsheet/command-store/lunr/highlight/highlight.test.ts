@@ -5,15 +5,15 @@ import { highlight as highlightCmd } from './highlight';
 interface HighlightTestCase {
   title: string;
 
-  command: CommandPart[];
-  description: CommandPart[];
-  shortcut: CommandPart[];
+  command: ReadonlyArray<CommandPart>;
+  description: ReadonlyArray<CommandPart>;
+  shortcut: ReadonlyArray<CommandPart>;
 
   terms: string[];
 
-  highlightedCommand: CommandPart[];
-  highlightedDescription: CommandPart[];
-  highlightedShortcut: CommandPart[];
+  highlightedCommand: ReadonlyArray<CommandPart>;
+  highlightedDescription: ReadonlyArray<CommandPart>;
+  highlightedShortcut: ReadonlyArray<CommandPart>;
 }
 
 const testCases: HighlightTestCase[] = [

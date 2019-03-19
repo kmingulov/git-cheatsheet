@@ -26,9 +26,9 @@ describe(commandFromDescriptor, () => {
     description: Array<CommandPart | string>;
     shortcut?: Array<CommandPart | string>;
 
-    expectedCommand: CommandPart[];
-    expectedDescription: CommandPart[];
-    expectedShortcut: CommandPart[];
+    expectedCommand: ReadonlyArray<CommandPart>;
+    expectedDescription: ReadonlyArray<CommandPart>;
+    expectedShortcut: ReadonlyArray<CommandPart>;
   }
 
   const testCases: CommandFromDescriptorTestCase[] = [
