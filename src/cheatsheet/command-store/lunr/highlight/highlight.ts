@@ -14,7 +14,7 @@ const highlightParts = (parts: ReadonlyArray<CommandPart>, regexp: RegExp): Read
     .map(part => highlightPart(part, regexp))
     .reduce((theseParts, otherParts) => theseParts.concat(otherParts), []);
 
-export const highlight = (command: Command, terms: string[]): Command => {
+export function highlight(command: Command, terms: ReadonlyArray<string>): Command {
   const regexp = new RegExp('(' + terms.join('|') + ')', 'i');
 
   const highlightedCommand = highlightParts(command.command, regexp);
@@ -22,4 +22,4 @@ export const highlight = (command: Command, terms: string[]): Command => {
   const highlightedShortcut = highlightParts(command.scmBreezeShortcut, regexp);
 
   return new Command(command.id, highlightedCommand, highlightedDescription, highlightedShortcut);
-};
+}

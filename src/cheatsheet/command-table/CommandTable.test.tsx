@@ -12,7 +12,7 @@ Enzyme.configure({adapter: new Adapter()});
 jest.mock('./CommandGroupTable');
 
 class CommandStoreStub implements CommandStore {
-  public getAll(): CommandGroup[] {
+  public getAll(): ReadonlyArray<CommandGroup> {
     return [
       new CommandGroup('Basic Commands', []),
       new CommandGroup('Advanced Commands', []),

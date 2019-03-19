@@ -8,7 +8,7 @@ import { SearchableCommand } from './SearchableCommand';
 
 const IGNORED_TOKEN_CHARS = /\W+/;
 
-const getAllCommands = (groups: CommandGroup[]): ReadonlyArray<Command> => {
+const getAllCommands = (groups: ReadonlyArray<CommandGroup>): ReadonlyArray<Command> => {
   return groups
     .map(group => group.commands)
     .reduce((a, b) => a.concat(b), []);
@@ -49,11 +49,11 @@ const buildSearchIndex = (commands: ReadonlyArray<Command>): Index => {
 };
 
 export class LunrCommandStore implements CommandStore {
-  private readonly commandGroups: CommandGroup[];
+  private readonly commandGroups: ReadonlyArray<CommandGroup>;
   private readonly commandById: CommandByIdHash;
   private readonly searchIndex: lunr.Index;
 
-  constructor(commandGroups: CommandGroup[]) {
+  constructor(commandGroups: ReadonlyArray<CommandGroup>) {
     this.commandGroups = commandGroups;
 
     const commands = getAllCommands(commandGroups);
@@ -61,7 +61,7 @@ export class LunrCommandStore implements CommandStore {
     this.searchIndex = buildSearchIndex(commands);
   }
 
-  public getAll(): CommandGroup[] {
+  public getAll(): ReadonlyArray<CommandGroup> {
     return this.commandGroups;
   }
 
