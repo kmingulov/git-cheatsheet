@@ -48,11 +48,18 @@ const buildSearchIndex = (commands: ReadonlyArray<Command>): Index => {
   return builder.build();
 };
 
+/**
+ * Implementation of {@link CommandStore} powered by lunr search engine.
+ */
 export class LunrCommandStore implements CommandStore {
   private readonly commandGroups: ReadonlyArray<CommandGroup>;
   private readonly commandById: CommandByIdHash;
   private readonly searchIndex: lunr.Index;
 
+  /**
+   * Constructs a new {@link LunrCommandStore} by an array of commands groups.
+   * @param commandGroups command groups
+   */
   constructor(commandGroups: ReadonlyArray<CommandGroup>) {
     this.commandGroups = commandGroups;
 
@@ -61,10 +68,16 @@ export class LunrCommandStore implements CommandStore {
     this.searchIndex = buildSearchIndex(commands);
   }
 
+  /**
+   * @inheritdoc
+   */
   public getAll(): ReadonlyArray<CommandGroup> {
     return this.commandGroups;
   }
 
+  /**
+   * @inheritdoc
+   */
   public search(searchQuery: string): ReadonlyArray<Command> {
     const terms = searchQuery
       .split(IGNORED_TOKEN_CHARS)
