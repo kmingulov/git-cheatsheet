@@ -1,6 +1,10 @@
 import React, { Component, ReactElement } from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 
+/**
+ * Header component with application's name.
+ * @inheritdoc
+ */
 export class AppHeader extends Component {
   public shouldComponentUpdate(): boolean {
     return false;

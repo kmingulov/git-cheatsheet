@@ -10,6 +10,9 @@ interface CommandGroupTableProps {
   group: CommandGroup;
 }
 
+/**
+ * Component for rendering a {@link CommandGroup} instance.
+ */
 export class CommandGroupTable extends Component<CommandGroupTableProps> {
   public shouldComponentUpdate(nextProps: Readonly<CommandGroupTableProps>): boolean {
     return !equal(this.props, nextProps);
