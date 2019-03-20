@@ -21,7 +21,7 @@ const highlightParts = (parts: ReadonlyArray<CommandPart>, regexp: RegExp): Read
  * @param command command to highlight
  * @param terms search terms
  */
-export function highlight(command: Command, terms: ReadonlyArray<string>): Command {
+export function highlightCommand(command: Command, terms: ReadonlyArray<string>): Command {
   const regexp = new RegExp('(' + terms.join('|') + ')', 'i');
 
   const highlightedCommand = highlightParts(command.command, regexp);

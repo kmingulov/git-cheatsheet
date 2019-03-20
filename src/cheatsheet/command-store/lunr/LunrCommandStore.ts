@@ -3,7 +3,7 @@ import { Builder, Index, Pipeline, PipelineFunction, Query } from 'lunr';
 import { Command, CommandGroup } from 'cheatsheet/command';
 
 import { CommandStore } from '../CommandStore';
-import { highlightAll } from './highlight';
+import { highlightCommands } from './highlight';
 import { SearchableCommand } from './SearchableCommand';
 
 const IGNORED_TOKEN_CHARS = /\W+/;
@@ -94,7 +94,7 @@ export class LunrCommandStore implements CommandStore {
       q.term(terms, { usePipeline: false, editDistance: 1, boost: 1 });
     });
 
-    return highlightAll(
+    return highlightCommands(
       results.map(searchResult => this.commandById[searchResult.ref]),
       terms,
     );
