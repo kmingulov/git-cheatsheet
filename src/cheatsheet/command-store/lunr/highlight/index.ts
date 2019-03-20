@@ -1,2 +1,2 @@
-export * from './highlight';
-export * from './highlightAll';
+export * from './highlightCommand';
+export * from './highlightCommands';

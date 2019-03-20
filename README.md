@@ -2,6 +2,10 @@
 
 [![Build Status](https://api.travis-ci.org/kmingulov/git-cheatsheet.svg?branch=master)](https://travis-ci.org/kmingulov/git-cheatsheet)
 [![Code Coverage](https://codecov.io/gh/kmingulov/git-cheatsheet/branch/master/graph/badge.svg)](https://codecov.io/gh/kmingulov/git-cheatsheet/)
+[![Dependencies](https://david-dm.org/kmingulov/git-cheatsheet.svg)](https://david-dm.org/kmingulov/git-cheatsheet)
+<br/>
+![Version](https://img.shields.io/github/package-json/v/kmingulov/git-cheatsheet.svg)
+![License](https://img.shields.io/github/license/kmingulov/git-cheatsheet.svg)
 
 Interactive comprehensive cheatsheet for the popular version control system [Git](https://git-scm.com/).
 

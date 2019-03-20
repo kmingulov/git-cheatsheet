@@ -43,6 +43,9 @@ interface CommandTableRowProps {
   command: Command;
 }
 
+/**
+ * Component for rendering a single {@link Command} as a row in {@link CommandTable}.
+ */
 export class CommandTableRow extends PureComponent<CommandTableRowProps> {
   public render(): ReactElement {
     const { command } = this.props;

@@ -6,9 +6,9 @@ describe(SearchableCommand, () => {
   interface SearchableCommandTestCase {
     title: string;
 
-    command: CommandPart[];
-    description: CommandPart[];
-    shortcut: CommandPart[];
+    command: ReadonlyArray<CommandPart>;
+    description: ReadonlyArray<CommandPart>;
+    shortcut: ReadonlyArray<CommandPart>;
 
     expectedCommand: string;
     expectedDescription: string;

@@ -1,6 +1,6 @@
 import { Command, command, highlight, none } from 'cheatsheet/command';
 
-import { highlightAll } from './highlightAll';
+import { highlightCommands } from './highlightCommands';
 
 const cmd = new Command(
   'cmd-1',
@@ -30,9 +30,9 @@ const otherHighlightedCmd = new Command(
 
 const searchTerms = [ 'message', 'description' ];
 
-describe(highlightAll, () => {
+describe(highlightCommands, () => {
   it('highlights all commands', () => {
-    const actualCmds = highlightAll([ cmd, otherCmd ], searchTerms);
+    const actualCmds = highlightCommands([ cmd, otherCmd ], searchTerms);
     expect(actualCmds).toEqual([ highlightedCmd, otherHighlightedCmd ]);
   });
 });

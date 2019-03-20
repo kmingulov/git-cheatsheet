@@ -11,8 +11,15 @@ const StaticInputGroupPrepend = staticComponent(InputGroup.Prepend);
 const StaticInputGroupAppend = staticComponent(InputGroup.Append);
 
 type State = Readonly<{ searchTerm: string }>;
+
+/**
+ * Page component with {@link CommandTable}.
+ */
 export class CommandPage extends PureComponent<object, State> {
-  public readonly state: State = { searchTerm: '' };
+  public readonly state: State = {
+    /** Search term(s) entered into the search box and which is (are) used to filter out {@link Command}s. */
+    searchTerm: '',
+  };
 
   private store: CommandStore = new LunrCommandStore(commands);
 

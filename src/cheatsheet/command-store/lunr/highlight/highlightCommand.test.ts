@@ -1,19 +1,19 @@
 import { Command, command, CommandPart, highlight, none } from 'cheatsheet/command';
 
-import { highlight as highlightCmd } from './highlight';
+import { highlightCommand } from './highlightCommand';
 
 interface HighlightTestCase {
   title: string;
 
-  command: CommandPart[];
-  description: CommandPart[];
-  shortcut: CommandPart[];
+  command: ReadonlyArray<CommandPart>;
+  description: ReadonlyArray<CommandPart>;
+  shortcut: ReadonlyArray<CommandPart>;
 
   terms: string[];
 
-  highlightedCommand: CommandPart[];
-  highlightedDescription: CommandPart[];
-  highlightedShortcut: CommandPart[];
+  highlightedCommand: ReadonlyArray<CommandPart>;
+  highlightedDescription: ReadonlyArray<CommandPart>;
+  highlightedShortcut: ReadonlyArray<CommandPart>;
 }
 
 const testCases: HighlightTestCase[] = [
@@ -58,12 +58,12 @@ const testCases: HighlightTestCase[] = [
   },
 ];
 
-describe(highlightCmd, () => {
+describe(highlightCommand, () => {
   testCases.forEach((testCase, id) => {
     it(testCase.title, () => {
       const cmdId = `cmd-${id}`;
       const cmd = new Command(cmdId, testCase.command, testCase.description, testCase.shortcut);
-      const highlightedCmd = highlightCmd(cmd, testCase.terms);
+      const highlightedCmd = highlightCommand(cmd, testCase.terms);
 
       expect(highlightedCmd.id).toEqual(cmdId);
       expect(highlightedCmd.command).toEqual(testCase.highlightedCommand);

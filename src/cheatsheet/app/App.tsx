@@ -6,12 +6,11 @@ import { CommandPage } from './pages';
 
 import './App.css';
 
-const initialState = { searchTerm: '' };
-type State = Readonly<typeof initialState>;
-
-export class App extends Component<object, State> {
-  public readonly state: State = initialState;
-
+/**
+ * Main application component.
+ * @inheritdoc
+ */
+export class App extends Component {
   public render(): ReactElement {
     return (
       <div>
