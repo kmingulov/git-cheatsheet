@@ -2,6 +2,8 @@ import React, { PureComponent, ReactElement } from 'react';
 
 import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
+import './CommandTableRow.css';
+
 const renderPart = (part: CommandPart, key: any): ReactElement | string => {
   if (part.role === CommandPartType.NONE) {
     return part.text;
