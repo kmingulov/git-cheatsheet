@@ -52,44 +52,64 @@ exports[`CommandTableRow renders correctly a command with shortcut 1`] = `
         }
       }
     >
-      <tr>
-        <td
-          className="git-command-column"
-        >
-          <span>
+      <tr
+        className="command-row"
+      >
+        <td>
+          <div
+            className="command-content"
+            id="cmd-1"
+          >
             <span>
-              <span
-                className="git"
-              >
-                git
+              <span>
+                <span
+                  className="command-part-git"
+                >
+                  git
+                </span>
+                 
+                <span
+                  className="command-part-command"
+                  key="0"
+                >
+                  commit
+                </span>
+                 
+                -m
+                message
               </span>
-               
-              <span
-                className="git-command"
-                key="0"
-              >
-                commit
-              </span>
-               
-              -m
-              message
+              <br />
+              <small>
+                <span
+                  className="command-part-command"
+                  key="0"
+                >
+                  gc
+                </span>
+                 
+                -m
+                message
+              </small>
             </span>
-            <br />
-            <small>
-              <span
-                className="git-command"
-                key="0"
-              >
-                gc
-              </span>
-               
-              -m
-              message
-            </small>
-          </span>
+          </div>
         </td>
         <td>
-          Commit changes in the staging area with the given message.
+          <div
+            className="command-description"
+          >
+            <div>
+              Commit changes in the staging area with the given message.
+            </div>
+            <div
+              className="command-anchor-link"
+            >
+              <a
+                href="#cmd-1"
+              >
+                #
+              </a>
+            </div>
+          </div>
         </td>
       </tr>
     </CommandTableRow>
@@ -132,30 +152,50 @@ exports[`CommandTableRow renders correctly a command without shortcut 1`] = `
         }
       }
     >
-      <tr>
-        <td
-          className="git-command-column"
-        >
-          <span>
-            <span
-              className="git"
-            >
-              git
+      <tr
+        className="command-row"
+      >
+        <td>
+          <div
+            className="command-content"
+            id="cmd-1"
+          >
+            <span>
+              <span
+                className="command-part-git"
+              >
+                git
+              </span>
+               
+              <span
+                className="command-part-command"
+                key="0"
+              >
+                commit
+              </span>
+               
+              -m
+              message
             </span>
-             
-            <span
-              className="git-command"
-              key="0"
-            >
-              commit
-            </span>
-             
-            -m
-            message
-          </span>
+          </div>
         </td>
         <td>
-          Commit changes in the staging area with the given message.
+          <div
+            className="command-description"
+          >
+            <div>
+              Commit changes in the staging area with the given message.
+            </div>
+            <div
+              className="command-anchor-link"
+            >
+              <a
+                href="#cmd-1"
+              >
+                #
+              </a>
+            </div>
+          </div>
         </td>
       </tr>
     </CommandTableRow>
