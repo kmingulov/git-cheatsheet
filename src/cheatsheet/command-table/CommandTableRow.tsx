@@ -2,12 +2,14 @@ import React, { PureComponent, ReactElement } from 'react';
 
 import { Command, CommandPart, CommandPartType } from 'cheatsheet/command';
 
+import './CommandTableRow.css';
+
 const renderPart = (part: CommandPart, key: any): ReactElement | string => {
   if (part.role === CommandPartType.NONE) {
     return part.text;
   }
 
-  const className: string = 'git-' + part.role.toString().toLocaleLowerCase();
+  const className: string = 'command-part-' + part.role.toString().toLocaleLowerCase();
   return (
     <span className={ className } key={ key }>
       { part.text }
@@ -18,7 +20,7 @@ const renderPart = (part: CommandPart, key: any): ReactElement | string => {
 const renderCommand = (command: Command): ReactElement => {
   const renderedCommand = (
     <span>
-      <span className='git'>git</span>
+      <span className='command-part-git'>git</span>
       { ' ' }
       { command.command.map(renderPart) }
     </span>
@@ -51,12 +53,21 @@ export class CommandTableRow extends PureComponent<CommandTableRowProps> {
     const { command } = this.props;
 
     return (
-      <tr>
-        <td className='git-command-column'>
-          { renderCommand(command) }
+      <tr className='command-row'>
+        <td>
+          <div id={ command.id } className='command-content'>
+            { renderCommand(command) }
+          </div>
         </td>
         <td>
-          { command.description.map(renderPart) }
+          <div className='command-description'>
+            <div>
+              { command.description.map(renderPart) }
+            </div>
+            <div className='command-anchor-link'>
+              <a href={ `#${command.id}` }>#</a>
+            </div>
+          </div>
         </td>
       </tr>
     );

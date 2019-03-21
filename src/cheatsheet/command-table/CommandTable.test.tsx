@@ -14,8 +14,8 @@ jest.mock('./CommandGroupTable');
 class CommandStoreStub implements CommandStore {
   public getAll(): ReadonlyArray<CommandGroup> {
     return [
-      new CommandGroup('Basic Commands', []),
-      new CommandGroup('Advanced Commands', []),
+      new CommandGroup('basic', 'Basic Commands', []),
+      new CommandGroup('advanced', 'Advanced Commands', []),
     ];
   }
   public search(searchTerm: string): ReadonlyArray<Command> {

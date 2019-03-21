@@ -1,0 +1,70 @@
+/*
+ * Command styles.
+ */
+
+.command-row td:nth-of-type(1) {
+  width: 40%;
+}
+
+.command-content {
+  padding-top: 90px;
+  margin-top: -90px;
+}
+
+/*
+ * Command description styles.
+ */
+
+.command-description {
+  display: flex;
+}
+
+.command-anchor-link {
+  visibility: hidden;
+  margin-left: auto;
+  font-size: larger;
+}
+
+.command-row:hover .command-anchor-link {
+  visibility: visible;
+}
+
+.command-anchor-link a:hover {
+  text-decoration: none;
+}
+
+/*
+ * Command parts styles.
+ */
+
+.command-part-git, .command-part-command {
+  color: #999;
+}
+
+.command-part-remote {
+  color: #00bc8c;
+}
+
+.command-part-url {
+  text-decoration: underline;
+}
+
+.command-part-ref {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.command-part-file {
+  font-style: italic;
+}
+
+.command-part-string {
+  font-style: italic;
+  color: #00bc8c;
+}
+
+.command-part-highlight {
+  padding: 0 5px;
+  background-color: white;
+  color: black;
+}
