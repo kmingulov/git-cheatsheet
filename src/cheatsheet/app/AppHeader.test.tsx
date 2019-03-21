@@ -4,6 +4,10 @@ import React from 'react';
 
 import { AppHeader } from './AppHeader';
 
+jest.mock('react-icons/go', () => ({
+  GoMarkGithub: () => <div/>,
+}));
+
 Enzyme.configure({adapter: new Adapter()});
 
 describe(AppHeader, () => {
