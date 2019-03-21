@@ -24,7 +24,10 @@ exports[`CommandGroupTable re-renders when props are changed 1`] = `
   }
 >
   <div>
-    <h4>
+    <h4
+      className="command-group-title"
+      id="basic"
+    >
       Basic Commands
        
       <ForwardRef(Bootstrap(Badge))
@@ -42,6 +45,13 @@ exports[`CommandGroupTable re-renders when props are changed 1`] = `
           </span>
         </Badge>
       </ForwardRef(Bootstrap(Badge))>
+       
+      <a
+        className="command-group-link"
+        href="#basic"
+      >
+        #
+      </a>
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}
@@ -97,7 +107,10 @@ exports[`CommandGroupTable re-renders when props are changed 2`] = `
   }
 >
   <div>
-    <h4>
+    <h4
+      className="command-group-title"
+      id="another"
+    >
       Another Group
        
       <ForwardRef(Bootstrap(Badge))
@@ -115,6 +128,13 @@ exports[`CommandGroupTable re-renders when props are changed 2`] = `
           </span>
         </Badge>
       </ForwardRef(Bootstrap(Badge))>
+       
+      <a
+        className="command-group-link"
+        href="#another"
+      >
+        #
+      </a>
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}
@@ -160,7 +180,10 @@ exports[`CommandGroupTable renders correctly 1`] = `
   }
 >
   <div>
-    <h4>
+    <h4
+      className="command-group-title"
+      id="basic"
+    >
       Basic Commands
        
       <ForwardRef(Bootstrap(Badge))
@@ -178,6 +201,13 @@ exports[`CommandGroupTable renders correctly 1`] = `
           </span>
         </Badge>
       </ForwardRef(Bootstrap(Badge))>
+       
+      <a
+        className="command-group-link"
+        href="#basic"
+      >
+        #
+      </a>
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}

@@ -1,0 +1,16 @@
+.command-group-title {
+  padding-top: 90px;
+  margin-top: -90px;
+}
+
+.command-group-title:hover .command-group-link {
+  visibility: visible;
+}
+
+.command-group-link {
+  visibility: hidden;
+}
+
+.command-group-link:hover {
+  text-decoration: none;
+}

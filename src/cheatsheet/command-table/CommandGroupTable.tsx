@@ -6,6 +6,8 @@ import equal from 'fast-deep-equal';
 import { CommandGroup } from 'cheatsheet/command';
 import { CommandTableRow } from './CommandTableRow';
 
+import './CommandGroupTable.css';
+
 interface CommandGroupTableProps {
   group: CommandGroup;
 }
@@ -23,10 +25,12 @@ export class CommandGroupTable extends Component<CommandGroupTableProps> {
 
     return (
       <div>
-        <h4>
+        <h4 id={ group.id } className='command-group-title'>
           { group.title }
           { ' ' }
           <Badge variant='secondary'>{ group.commands.length }</Badge>
+          { ' ' }
+          <a href={ `#${group.id}` } className='command-group-link'>#</a>
         </h4>
         <Table striped bordered>
           <tbody>
