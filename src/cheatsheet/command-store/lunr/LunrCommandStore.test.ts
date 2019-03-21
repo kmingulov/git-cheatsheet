@@ -41,8 +41,8 @@ const highlightedLogCommand = new Command(
   [ command('gl') ],
 );
 
-const commitGroup = new CommandGroup('Commit', [ commitCommand, commitMessageCommand ]);
-const logGroup = new CommandGroup('Log', [ logCommand ]);
+const commitGroup = new CommandGroup('commit', 'Commit', [ commitCommand, commitMessageCommand ]);
+const logGroup = new CommandGroup('log', 'Log', [ logCommand ]);
 
 describe(LunrCommandStore, () => {
   const store = new LunrCommandStore([ commitGroup, logGroup ]);

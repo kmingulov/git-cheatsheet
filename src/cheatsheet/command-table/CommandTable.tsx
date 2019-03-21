@@ -18,7 +18,7 @@ export class CommandTable extends PureComponent<CommandTableProps> {
     const { store, searchTerm } = this.props;
 
     const groups = searchTerm != null && searchTerm !== ''
-      ? [ new CommandGroup('Search Results', store.search(searchTerm)) ]
+      ? [ new CommandGroup('search', 'Search Results', store.search(searchTerm)) ]
       : store.getAll();
 
     return (

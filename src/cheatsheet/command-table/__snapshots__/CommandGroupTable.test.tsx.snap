@@ -18,6 +18,7 @@ exports[`CommandGroupTable re-renders when props are changed 1`] = `
           "scmBreezeShortcut": Array [],
         },
       ],
+      "id": "basic",
       "title": "Basic Commands",
     }
   }
@@ -90,6 +91,7 @@ exports[`CommandGroupTable re-renders when props are changed 2`] = `
   group={
     CommandGroup {
       "commands": Array [],
+      "id": "another",
       "title": "Another Group",
     }
   }
@@ -152,6 +154,7 @@ exports[`CommandGroupTable renders correctly 1`] = `
           "scmBreezeShortcut": Array [],
         },
       ],
+      "id": "basic",
       "title": "Basic Commands",
     }
   }

@@ -12,7 +12,7 @@ jest.mock('./CommandTableRow');
 
 const cmd = new Command('cmd-1', [], []);
 const otherCmd = new Command('cmd-2', [], []);
-const group = new CommandGroup('Basic Commands', [cmd, otherCmd]);
+const group = new CommandGroup('basic', 'Basic Commands', [cmd, otherCmd]);
 
 describe(CommandGroupTable, () => {
   it('renders correctly', () => {
@@ -24,7 +24,7 @@ describe(CommandGroupTable, () => {
     const component = mount(<CommandGroupTable group={ group }/>);
     expect(component).toMatchSnapshot();
 
-    component.setProps({ group: new CommandGroup('Another Group', []) });
+    component.setProps({ group: new CommandGroup('another', 'Another Group', []) });
     expect(component).toMatchSnapshot();
   });
 });

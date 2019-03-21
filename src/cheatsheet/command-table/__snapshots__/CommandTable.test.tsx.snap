@@ -41,6 +41,7 @@ exports[`CommandTable renders found commands when searchTerm is present 1`] = `
               "scmBreezeShortcut": Array [],
             },
           ],
+          "id": "search",
           "title": "Search Results",
         }
       }
@@ -64,10 +65,12 @@ exports[`CommandTable renders full list of commands when searchTerm isn't presen
             "value": Array [
               CommandGroup {
                 "commands": Array [],
+                "id": "basic",
                 "title": "Basic Commands",
               },
               CommandGroup {
                 "commands": Array [],
+                "id": "advanced",
                 "title": "Advanced Commands",
               },
             ],
@@ -83,6 +86,7 @@ exports[`CommandTable renders full list of commands when searchTerm isn't presen
       group={
         CommandGroup {
           "commands": Array [],
+          "id": "basic",
           "title": "Basic Commands",
         }
       }
@@ -92,6 +96,7 @@ exports[`CommandTable renders full list of commands when searchTerm isn't presen
       group={
         CommandGroup {
           "commands": Array [],
+          "id": "advanced",
           "title": "Advanced Commands",
         }
       }

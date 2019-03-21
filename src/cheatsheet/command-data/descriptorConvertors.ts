@@ -26,6 +26,7 @@ export function commandFromDescriptor(descriptor: CommandDescriptor, groupName: 
  */
 export function groupFromDescriptor(descriptor: CommandGroupDescriptor): CommandGroup {
   return new CommandGroup(
+    descriptor.id,
     descriptor.title,
     descriptor.commands.map((cmdDescriptor, id) =>
       commandFromDescriptor(cmdDescriptor, descriptor.id, id),
