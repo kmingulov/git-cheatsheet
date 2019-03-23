@@ -28,30 +28,32 @@ exports[`CommandGroupTable re-renders when props are changed 1`] = `
       className="command-group-title"
       id="basic"
     >
-      Basic Commands
-       
-      <ForwardRef(Bootstrap(Badge))
-        variant="secondary"
-      >
-        <Badge
-          bsPrefix="badge"
-          pill={false}
+      <div>
+        Basic Commands
+         
+        <ForwardRef(Bootstrap(Badge))
           variant="secondary"
         >
-          <span
-            className="badge badge-secondary"
+          <Badge
+            bsPrefix="badge"
+            pill={false}
+            variant="secondary"
           >
-            2
-          </span>
-        </Badge>
-      </ForwardRef(Bootstrap(Badge))>
-       
-      <a
-        className="command-group-link"
-        href="#basic"
-      >
-        #
-      </a>
+            <span
+              className="badge badge-secondary"
+            >
+              2
+            </span>
+          </Badge>
+        </ForwardRef(Bootstrap(Badge))>
+         
+        <a
+          className="command-group-link"
+          href="#basic"
+        >
+          #
+        </a>
+      </div>
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}
@@ -111,30 +113,32 @@ exports[`CommandGroupTable re-renders when props are changed 2`] = `
       className="command-group-title"
       id="another"
     >
-      Another Group
-       
-      <ForwardRef(Bootstrap(Badge))
-        variant="secondary"
-      >
-        <Badge
-          bsPrefix="badge"
-          pill={false}
+      <div>
+        Another Group
+         
+        <ForwardRef(Bootstrap(Badge))
           variant="secondary"
         >
-          <span
-            className="badge badge-secondary"
+          <Badge
+            bsPrefix="badge"
+            pill={false}
+            variant="secondary"
           >
-            0
-          </span>
-        </Badge>
-      </ForwardRef(Bootstrap(Badge))>
-       
-      <a
-        className="command-group-link"
-        href="#another"
-      >
-        #
-      </a>
+            <span
+              className="badge badge-secondary"
+            >
+              0
+            </span>
+          </Badge>
+        </ForwardRef(Bootstrap(Badge))>
+         
+        <a
+          className="command-group-link"
+          href="#another"
+        >
+          #
+        </a>
+      </div>
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}
@@ -184,30 +188,32 @@ exports[`CommandGroupTable renders correctly 1`] = `
       className="command-group-title"
       id="basic"
     >
-      Basic Commands
-       
-      <ForwardRef(Bootstrap(Badge))
-        variant="secondary"
-      >
-        <Badge
-          bsPrefix="badge"
-          pill={false}
+      <div>
+        Basic Commands
+         
+        <ForwardRef(Bootstrap(Badge))
           variant="secondary"
         >
-          <span
-            className="badge badge-secondary"
+          <Badge
+            bsPrefix="badge"
+            pill={false}
+            variant="secondary"
           >
-            2
-          </span>
-        </Badge>
-      </ForwardRef(Bootstrap(Badge))>
-       
-      <a
-        className="command-group-link"
-        href="#basic"
-      >
-        #
-      </a>
+            <span
+              className="badge badge-secondary"
+            >
+              2
+            </span>
+          </Badge>
+        </ForwardRef(Bootstrap(Badge))>
+         
+        <a
+          className="command-group-link"
+          href="#basic"
+        >
+          #
+        </a>
+      </div>
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}

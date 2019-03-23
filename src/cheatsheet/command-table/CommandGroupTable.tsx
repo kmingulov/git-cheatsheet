@@ -26,11 +26,13 @@ export class CommandGroupTable extends Component<CommandGroupTableProps> {
     return (
       <div>
         <h4 id={ group.id } className='command-group-title'>
-          { group.title }
-          { ' ' }
-          <Badge variant='secondary'>{ group.commands.length }</Badge>
-          { ' ' }
-          <a href={ `#${group.id}` } className='command-group-link'>#</a>
+          <div>
+            { group.title }
+            { ' ' }
+            <Badge variant='secondary'>{ group.commands.length }</Badge>
+            { ' ' }
+            <a href={ `#${group.id}` } className='command-group-link'>#</a>
+          </div>
         </h4>
         <Table striped bordered>
           <tbody>
