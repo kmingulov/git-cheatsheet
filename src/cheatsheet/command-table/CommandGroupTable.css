@@ -1,4 +1,4 @@
-h4.command-group-title {
+div.command-group {
   pointer-events: none;
 }
 
@@ -10,7 +10,7 @@ h4.command-group-title:before {
   content: '';
 }
 
-h4.command-group-title > div {
+h4.command-group-title > div, table.command-group-table {
   pointer-events: auto;
 }
 

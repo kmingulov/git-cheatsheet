@@ -23,7 +23,9 @@ exports[`CommandGroupTable re-renders when props are changed 1`] = `
     }
   }
 >
-  <div>
+  <div
+    className="command-group"
+  >
     <h4
       className="command-group-title"
       id="basic"
@@ -57,15 +59,17 @@ exports[`CommandGroupTable re-renders when props are changed 1`] = `
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}
+      className="command-group-table"
       striped={true}
     >
       <Table
         bordered={true}
         bsPrefix="table"
+        className="command-group-table"
         striped={true}
       >
         <table
-          className="table table-striped table-bordered"
+          className="table command-group-table table-striped table-bordered"
         >
           <tbody>
             <CommandTableRow
@@ -108,7 +112,9 @@ exports[`CommandGroupTable re-renders when props are changed 2`] = `
     }
   }
 >
-  <div>
+  <div
+    className="command-group"
+  >
     <h4
       className="command-group-title"
       id="another"
@@ -142,15 +148,17 @@ exports[`CommandGroupTable re-renders when props are changed 2`] = `
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}
+      className="command-group-table"
       striped={true}
     >
       <Table
         bordered={true}
         bsPrefix="table"
+        className="command-group-table"
         striped={true}
       >
         <table
-          className="table table-striped table-bordered"
+          className="table command-group-table table-striped table-bordered"
         >
           <tbody />
         </table>
@@ -183,7 +191,9 @@ exports[`CommandGroupTable renders correctly 1`] = `
     }
   }
 >
-  <div>
+  <div
+    className="command-group"
+  >
     <h4
       className="command-group-title"
       id="basic"
@@ -217,15 +227,17 @@ exports[`CommandGroupTable renders correctly 1`] = `
     </h4>
     <ForwardRef(Bootstrap(Table))
       bordered={true}
+      className="command-group-table"
       striped={true}
     >
       <Table
         bordered={true}
         bsPrefix="table"
+        className="command-group-table"
         striped={true}
       >
         <table
-          className="table table-striped table-bordered"
+          className="table command-group-table table-striped table-bordered"
         >
           <tbody>
             <CommandTableRow
