@@ -5,6 +5,7 @@ import React from 'react';
 import { App } from './App';
 
 jest.mock('./AppHeader');
+jest.mock('./modals/AboutModal');
 jest.mock('./pages/CommandPage');
 
 Enzyme.configure({adapter: new Adapter()});
