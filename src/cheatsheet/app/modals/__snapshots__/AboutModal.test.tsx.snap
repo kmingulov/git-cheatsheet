@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutModal renders correctly when hidden 1`] = `
+<AboutModal
+  onClose={[Function]}
+  shown={false}
+>
+  <Modal
+    onHide={[Function]}
+    show={false}
+  >
+    <Modal.Header
+      closeButton={true}
+    >
+      <Modal.Title>
+        Git Cheatsheet v
+        1.0.0
+      </Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <p>
+        Git Cheatsheet is an interactive comprehensive cheatsheet which will help you to memorize all these numerous git commands!
+      </p>
+      <p>
+        There are currently 
+        <b>
+          3
+        </b>
+         commands in the cheatsheet.
+      </p>
+      <p>
+        Git Cheatsheet is an open-source project, licensed under MIT License and hosted on 
+        <a
+          href="https://github.com/kmingulov/git-cheatsheet"
+        >
+          GitHub
+        </a>
+        . If you think that the cheatsheet can be improved, please fill free to open an issue or submit a pull-request.
+      </p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button
+        onClick={[Function]}
+        variant="primary"
+      >
+        Close
+      </Button>
+    </Modal.Footer>
+  </Modal>
+</AboutModal>
+`;
+
+exports[`AboutModal renders correctly when redrawn 1`] = `
+<AboutModal
+  onClose={[Function]}
+  shown={true}
+>
+  <Modal
+    onHide={[Function]}
+    show={true}
+  >
+    <Modal.Header
+      closeButton={true}
+    >
+      <Modal.Title>
+        Git Cheatsheet v
+        1.0.0
+      </Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <p>
+        Git Cheatsheet is an interactive comprehensive cheatsheet which will help you to memorize all these numerous git commands!
+      </p>
+      <p>
+        There are currently 
+        <b>
+          3
+        </b>
+         commands in the cheatsheet.
+      </p>
+      <p>
+        Git Cheatsheet is an open-source project, licensed under MIT License and hosted on 
+        <a
+          href="https://github.com/kmingulov/git-cheatsheet"
+        >
+          GitHub
+        </a>
+        . If you think that the cheatsheet can be improved, please fill free to open an issue or submit a pull-request.
+      </p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button
+        onClick={[Function]}
+        variant="primary"
+      >
+        Close
+      </Button>
+    </Modal.Footer>
+  </Modal>
+</AboutModal>
+`;
+
+exports[`AboutModal renders correctly when redrawn 2`] = `
+<AboutModal
+  onClose={[Function]}
+  shown={false}
+>
+  <Modal
+    onHide={[Function]}
+    show={false}
+  >
+    <Modal.Header
+      closeButton={true}
+    >
+      <Modal.Title>
+        Git Cheatsheet v
+        1.0.0
+      </Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <p>
+        Git Cheatsheet is an interactive comprehensive cheatsheet which will help you to memorize all these numerous git commands!
+      </p>
+      <p>
+        There are currently 
+        <b>
+          3
+        </b>
+         commands in the cheatsheet.
+      </p>
+      <p>
+        Git Cheatsheet is an open-source project, licensed under MIT License and hosted on 
+        <a
+          href="https://github.com/kmingulov/git-cheatsheet"
+        >
+          GitHub
+        </a>
+        . If you think that the cheatsheet can be improved, please fill free to open an issue or submit a pull-request.
+      </p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button
+        onClick={[Function]}
+        variant="primary"
+      >
+        Close
+      </Button>
+    </Modal.Footer>
+  </Modal>
+</AboutModal>
+`;
+
+exports[`AboutModal renders correctly when shown 1`] = `
+<AboutModal
+  onClose={[Function]}
+  shown={true}
+>
+  <Modal
+    onHide={[Function]}
+    show={true}
+  >
+    <Modal.Header
+      closeButton={true}
+    >
+      <Modal.Title>
+        Git Cheatsheet v
+        1.0.0
+      </Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <p>
+        Git Cheatsheet is an interactive comprehensive cheatsheet which will help you to memorize all these numerous git commands!
+      </p>
+      <p>
+        There are currently 
+        <b>
+          3
+        </b>
+         commands in the cheatsheet.
+      </p>
+      <p>
+        Git Cheatsheet is an open-source project, licensed under MIT License and hosted on 
+        <a
+          href="https://github.com/kmingulov/git-cheatsheet"
+        >
+          GitHub
+        </a>
+        . If you think that the cheatsheet can be improved, please fill free to open an issue or submit a pull-request.
+      </p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button
+        onClick={[Function]}
+        variant="primary"
+      >
+        Close
+      </Button>
+    </Modal.Footer>
+  </Modal>
+</AboutModal>
+`;
