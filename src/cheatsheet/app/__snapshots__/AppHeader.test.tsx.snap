@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppHeader renders correctly 1`] = `
-<AppHeader>
+exports[`AppHeader hits the callback when clicking About 1`] = `
+<AppHeader
+  onAbout={[Function]}
+>
   <ForwardRef(Bootstrap(undefined))
     bg="primary"
     sticky="top"
@@ -133,17 +135,24 @@ exports[`AppHeader renders correctly 1`] = `
                                             className="mr-auto navbar-nav"
                                             onKeyDown={[Function]}
                                           >
-                                            <ForwardRef(Bootstrap(NavLink))>
+                                            <ForwardRef(Bootstrap(NavLink))
+                                              id="about-link"
+                                              onClick={[Function]}
+                                            >
                                               <NavLink
                                                 as={[Function]}
                                                 bsPrefix="nav-link"
                                                 disabled={false}
+                                                id="about-link"
                                                 innerRef={null}
+                                                onClick={[Function]}
                                               >
                                                 <AbstractNavItem
                                                   as={[Function]}
                                                   className="nav-link"
                                                   disabled={false}
+                                                  id="about-link"
+                                                  onClick={[Function]}
                                                 >
                                                   <SafeAnchor
                                                     as="a"
@@ -283,9 +292,9 @@ exports[`AppHeader renders correctly 1`] = `
 </AppHeader>
 `;
 
-exports[`AppHeader renders correctly 2`] = `
+exports[`AppHeader hits the callback when clicking About 2`] = `
 <AppHeader
-  prop="value"
+  onAbout={[Function]}
 >
   <ForwardRef(Bootstrap(undefined))
     bg="primary"
@@ -418,17 +427,316 @@ exports[`AppHeader renders correctly 2`] = `
                                             className="mr-auto navbar-nav"
                                             onKeyDown={[Function]}
                                           >
-                                            <ForwardRef(Bootstrap(NavLink))>
+                                            <ForwardRef(Bootstrap(NavLink))
+                                              id="about-link"
+                                              onClick={[Function]}
+                                            >
                                               <NavLink
                                                 as={[Function]}
                                                 bsPrefix="nav-link"
                                                 disabled={false}
+                                                id="about-link"
                                                 innerRef={null}
+                                                onClick={[Function]}
                                               >
                                                 <AbstractNavItem
                                                   as={[Function]}
                                                   className="nav-link"
                                                   disabled={false}
+                                                  id="about-link"
+                                                  onClick={[Function]}
+                                                >
+                                                  <SafeAnchor
+                                                    as="a"
+                                                    className="nav-link"
+                                                    data-rb-event-key={null}
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <a
+                                                      className="nav-link"
+                                                      data-rb-event-key={null}
+                                                      href="#"
+                                                      onClick={[Function]}
+                                                      onKeyDown={[Function]}
+                                                      role="button"
+                                                    >
+                                                      About
+                                                    </a>
+                                                  </SafeAnchor>
+                                                </AbstractNavItem>
+                                              </NavLink>
+                                            </ForwardRef(Bootstrap(NavLink))>
+                                          </div>
+                                        </AbstractNav>
+                                      </ForwardRef(ContextTransform(AbstractNav))>
+                                    </Nav>
+                                  </ForwardRef(Bootstrap(Nav))>
+                                </Uncontrolled(Component)>
+                              </ForwardRef>
+                            </ForwardRef(ContextTransform)>
+                            <ForwardRef(ContextTransform)>
+                              <ForwardRef
+                                navbar={true}
+                                navbarBsPrefix="navbar"
+                              >
+                                <Uncontrolled(Component)
+                                  innerRef={null}
+                                  navbar={true}
+                                  navbarBsPrefix="navbar"
+                                >
+                                  <ForwardRef(Bootstrap(Nav))
+                                    navbar={true}
+                                    navbarBsPrefix="navbar"
+                                    onSelect={[Function]}
+                                  >
+                                    <Nav
+                                      as="div"
+                                      bsPrefix="nav"
+                                      fill={false}
+                                      justify={false}
+                                      navbar={true}
+                                      navbarBsPrefix="navbar"
+                                      onSelect={[Function]}
+                                    >
+                                      <ForwardRef(ContextTransform(AbstractNav))
+                                        as="div"
+                                        className="navbar-nav"
+                                        onSelect={[Function]}
+                                      >
+                                        <AbstractNav
+                                          as="div"
+                                          className="navbar-nav"
+                                          onSelect={[Function]}
+                                          parentOnSelect={[Function]}
+                                        >
+                                          <div
+                                            className="navbar-nav"
+                                            onKeyDown={[Function]}
+                                          >
+                                            <ForwardRef(Bootstrap(NavLink))
+                                              href="https://github.com/kmingulov/git-cheatsheet"
+                                              target="_blank"
+                                            >
+                                              <NavLink
+                                                as={[Function]}
+                                                bsPrefix="nav-link"
+                                                disabled={false}
+                                                href="https://github.com/kmingulov/git-cheatsheet"
+                                                innerRef={null}
+                                                target="_blank"
+                                              >
+                                                <AbstractNavItem
+                                                  as={[Function]}
+                                                  className="nav-link"
+                                                  disabled={false}
+                                                  href="https://github.com/kmingulov/git-cheatsheet"
+                                                  target="_blank"
+                                                >
+                                                  <SafeAnchor
+                                                    as="a"
+                                                    className="nav-link"
+                                                    data-rb-event-key="https://github.com/kmingulov/git-cheatsheet"
+                                                    disabled={false}
+                                                    href="https://github.com/kmingulov/git-cheatsheet"
+                                                    onClick={[Function]}
+                                                    target="_blank"
+                                                  >
+                                                    <a
+                                                      className="nav-link"
+                                                      data-rb-event-key="https://github.com/kmingulov/git-cheatsheet"
+                                                      href="https://github.com/kmingulov/git-cheatsheet"
+                                                      onClick={[Function]}
+                                                      onKeyDown={[Function]}
+                                                      target="_blank"
+                                                    >
+                                                      <GoMarkGithub
+                                                        size={24}
+                                                      >
+                                                        <div />
+                                                      </GoMarkGithub>
+                                                    </a>
+                                                  </SafeAnchor>
+                                                </AbstractNavItem>
+                                              </NavLink>
+                                            </ForwardRef(Bootstrap(NavLink))>
+                                          </div>
+                                        </AbstractNav>
+                                      </ForwardRef(ContextTransform(AbstractNav))>
+                                    </Nav>
+                                  </ForwardRef(Bootstrap(Nav))>
+                                </Uncontrolled(Component)>
+                              </ForwardRef>
+                            </ForwardRef(ContextTransform)>
+                          </div>
+                        </Transition>
+                      </Collapse>
+                    </NavbarCollapse>
+                  </ForwardRef(Bootstrap(NavbarCollapse))>
+                </div>
+              </Container>
+            </ForwardRef(Bootstrap(Container))>
+          </nav>
+        </Navbar>
+      </Uncontrolled(Navbar)>
+    </ForwardRef>
+  </ForwardRef(Bootstrap(undefined))>
+</AppHeader>
+`;
+
+exports[`AppHeader renders correctly 1`] = `
+<AppHeader
+  onAbout={[Function]}
+>
+  <ForwardRef(Bootstrap(undefined))
+    bg="primary"
+    sticky="top"
+  >
+    <ForwardRef
+      bg="primary"
+      bsPrefix="navbar"
+      innerRef={null}
+      sticky="top"
+    >
+      <Uncontrolled(Navbar)
+        bg="primary"
+        bsPrefix="navbar"
+        innerRef={null}
+        sticky="top"
+      >
+        <Navbar
+          as="nav"
+          bg="primary"
+          bsPrefix="navbar"
+          collapseOnSelect={false}
+          expand={true}
+          onToggle={[Function]}
+          sticky="top"
+          variant="light"
+        >
+          <nav
+            className="navbar navbar-expand navbar-light bg-primary sticky-top"
+          >
+            <ForwardRef(Bootstrap(Container))
+              className="header"
+            >
+              <Container
+                as="div"
+                bsPrefix="container"
+                className="header"
+                fluid={false}
+              >
+                <div
+                  className="header container"
+                >
+                  <ForwardRef(Bootstrap(NavbarBrand))>
+                    <NavbarBrand
+                      bsPrefix="navbar-brand"
+                    >
+                      <span
+                        className="navbar-brand"
+                      >
+                        Git Cheatsheet
+                      </span>
+                    </NavbarBrand>
+                  </ForwardRef(Bootstrap(NavbarBrand))>
+                  <ForwardRef(Bootstrap(NavbarCollapse))>
+                    <NavbarCollapse
+                      bsPrefix="navbar-collapse"
+                    >
+                      <Collapse
+                        appear={false}
+                        dimension="height"
+                        getDimensionValue={[Function]}
+                        in={false}
+                        mountOnEnter={false}
+                        timeout={300}
+                        unmountOnExit={false}
+                      >
+                        <Transition
+                          addEndListener={[Function]}
+                          appear={false}
+                          aria-expanded={null}
+                          enter={true}
+                          exit={true}
+                          in={false}
+                          mountOnEnter={false}
+                          onEnter={[Function]}
+                          onEntered={[Function]}
+                          onEntering={[Function]}
+                          onExit={[Function]}
+                          onExited={[Function]}
+                          onExiting={[Function]}
+                          timeout={300}
+                          unmountOnExit={false}
+                        >
+                          <div
+                            aria-expanded={null}
+                            className="navbar-collapse collapse"
+                          >
+                            <ForwardRef(ContextTransform)
+                              className="mr-auto"
+                            >
+                              <ForwardRef
+                                className="mr-auto"
+                                navbar={true}
+                                navbarBsPrefix="navbar"
+                              >
+                                <Uncontrolled(Component)
+                                  className="mr-auto"
+                                  innerRef={null}
+                                  navbar={true}
+                                  navbarBsPrefix="navbar"
+                                >
+                                  <ForwardRef(Bootstrap(Nav))
+                                    className="mr-auto"
+                                    navbar={true}
+                                    navbarBsPrefix="navbar"
+                                    onSelect={[Function]}
+                                  >
+                                    <Nav
+                                      as="div"
+                                      bsPrefix="nav"
+                                      className="mr-auto"
+                                      fill={false}
+                                      justify={false}
+                                      navbar={true}
+                                      navbarBsPrefix="navbar"
+                                      onSelect={[Function]}
+                                    >
+                                      <ForwardRef(ContextTransform(AbstractNav))
+                                        as="div"
+                                        className="mr-auto navbar-nav"
+                                        onSelect={[Function]}
+                                      >
+                                        <AbstractNav
+                                          as="div"
+                                          className="mr-auto navbar-nav"
+                                          onSelect={[Function]}
+                                          parentOnSelect={[Function]}
+                                        >
+                                          <div
+                                            className="mr-auto navbar-nav"
+                                            onKeyDown={[Function]}
+                                          >
+                                            <ForwardRef(Bootstrap(NavLink))
+                                              id="about-link"
+                                              onClick={[Function]}
+                                            >
+                                              <NavLink
+                                                as={[Function]}
+                                                bsPrefix="nav-link"
+                                                disabled={false}
+                                                id="about-link"
+                                                innerRef={null}
+                                                onClick={[Function]}
+                                              >
+                                                <AbstractNavItem
+                                                  as={[Function]}
+                                                  className="nav-link"
+                                                  disabled={false}
+                                                  id="about-link"
+                                                  onClick={[Function]}
                                                 >
                                                   <SafeAnchor
                                                     as="a"

@@ -2,7 +2,7 @@ import React, { Component, ReactElement } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { GoMarkGithub } from 'react-icons/go';
 
-type Props = Readonly<{ onAbout?: () => void }>;
+type Props = Readonly<{ onAbout: () => void }>;
 
 /**
  * Header component with application's name.
@@ -21,7 +21,7 @@ export class AppHeader extends Component<Props> {
 
           <Navbar.Collapse>
             <Nav className='mr-auto'>
-              <Nav.Link onClick={ this.props.onAbout }>
+              <Nav.Link id='about-link' onClick={ this.props.onAbout }>
                 About
               </Nav.Link>
             </Nav>
