@@ -27,3 +27,87 @@ exports[`App renders correctly 1`] = `
   </ForwardRef(Bootstrap(Container))>
 </App>
 `;
+
+exports[`App shows and hides AboutModal 1`] = `
+<App>
+  <AboutModal
+    onClose={[Function]}
+    shown={false}
+  />
+  <AppHeader
+    onAbout={[Function]}
+  />
+  <ForwardRef(Bootstrap(Container))
+    className="mainContent"
+  >
+    <Container
+      as="div"
+      bsPrefix="container"
+      className="mainContent"
+      fluid={false}
+    >
+      <div
+        className="mainContent container"
+      >
+        <CommandPage />
+      </div>
+    </Container>
+  </ForwardRef(Bootstrap(Container))>
+</App>
+`;
+
+exports[`App shows and hides AboutModal 2`] = `
+<App>
+  <AboutModal
+    onClose={[Function]}
+    shown={true}
+  />
+  <AppHeader
+    onAbout={[Function]}
+  />
+  <ForwardRef(Bootstrap(Container))
+    className="mainContent"
+  >
+    <Container
+      as="div"
+      bsPrefix="container"
+      className="mainContent"
+      fluid={false}
+    >
+      <div
+        className="mainContent container"
+      >
+        <CommandPage />
+      </div>
+    </Container>
+  </ForwardRef(Bootstrap(Container))>
+</App>
+`;
+
+exports[`App shows and hides AboutModal 3`] = `
+<App>
+  <AboutModal
+    onClose={[Function]}
+    shown={false}
+  />
+  <AppHeader
+    onAbout={[Function]}
+  />
+  <ForwardRef(Bootstrap(Container))
+    className="mainContent"
+  >
+    <Container
+      as="div"
+      bsPrefix="container"
+      className="mainContent"
+      fluid={false}
+    >
+      <div
+        className="mainContent container"
+      >
+        <CommandPage />
+      </div>
+    </Container>
+  </ForwardRef(Bootstrap(Container))>
+</App>
+`;

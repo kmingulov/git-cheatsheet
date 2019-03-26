@@ -17,6 +17,10 @@ type State = Readonly<{ aboutModalShown: boolean }>;
 export class App extends Component<{}, State> {
   public state: State = { aboutModalShown: false };
 
+  public shouldComponentUpdate(nextProps: Readonly<{}>, nextState: State): boolean {
+    return this.state.aboutModalShown !== nextState.aboutModalShown;
+  }
+
   public render(): ReactElement {
     return (
       <>
