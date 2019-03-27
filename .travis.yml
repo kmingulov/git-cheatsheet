@@ -2,16 +2,29 @@ language: node_js
 node_js:
   - 8
 
+services:
+  - docker
+
 cache:
   directories:
     - node_modules
 
-script:
+before_script:
   - npm install codecov -g
-  - npm run all
 
-on:
-  branch: master
+script:
+  - npm run lint
+  - npm run coverage
+  - npm run build
+  - npm run docker-build
 
 after_success:
   - codecov
+  - if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]];
+    then
+      echo "Pushing image to DockerHub...";
+      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
+      npm run docker-push;
+    else
+      echo "Not building master, pushing image to DockerHub skipped.";
+    fi
