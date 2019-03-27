@@ -24,15 +24,17 @@ export class CommandGroupTable extends Component<CommandGroupTableProps> {
     const { group } = this.props;
 
     return (
-      <div>
+      <div className='command-group'>
         <h4 id={ group.id } className='command-group-title'>
-          { group.title }
-          { ' ' }
-          <Badge variant='secondary'>{ group.commands.length }</Badge>
-          { ' ' }
-          <a href={ `#${group.id}` } className='command-group-link'>#</a>
+          <div>
+            { group.title }
+            { ' ' }
+            <Badge variant='secondary'>{ group.commands.length }</Badge>
+            { ' ' }
+            <a href={ `#${group.id}` } className='command-group-link'>#</a>
+          </div>
         </h4>
-        <Table striped bordered>
+        <Table striped bordered className='command-group-table'>
           <tbody>
             { group.commands.map((command, i) => (
               <CommandTableRow command={ command } key={ i }/>

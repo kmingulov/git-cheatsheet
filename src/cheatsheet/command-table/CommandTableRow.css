@@ -2,13 +2,20 @@
  * Command styles.
  */
 
-.command-row td:nth-of-type(1) {
+.command-content {
   width: 40%;
 }
 
-.command-content {
-  padding-top: 90px;
+.command-anchor {
+  pointer-events: none;
+}
+
+.command-content:before, .command-anchor:before {
+  display: block;
+  height: 90px;
   margin-top: -90px;
+  visibility: hidden;
+  content: '';
 }
 
 /*

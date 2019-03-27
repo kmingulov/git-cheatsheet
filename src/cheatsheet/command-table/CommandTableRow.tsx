@@ -54,10 +54,9 @@ export class CommandTableRow extends PureComponent<CommandTableRowProps> {
 
     return (
       <tr className='command-row'>
-        <td>
-          <div id={ command.id } className='command-content'>
-            { renderCommand(command) }
-          </div>
+        <td className='command-content'>
+          <div id={ command.id } className='command-anchor'></div>
+          { renderCommand(command) }
         </td>
         <td>
           <div className='command-description'>

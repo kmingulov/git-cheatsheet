@@ -1,9 +1,20 @@
-.command-group-title {
-  padding-top: 90px;
-  margin-top: -90px;
+div.command-group {
+  pointer-events: none;
 }
 
-.command-group-title:hover .command-group-link {
+h4.command-group-title:before {
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+  visibility: hidden;
+  content: '';
+}
+
+h4.command-group-title > div, table.command-group-table {
+  pointer-events: auto;
+}
+
+h4.command-group-title:hover .command-group-link {
   visibility: visible;
 }
 

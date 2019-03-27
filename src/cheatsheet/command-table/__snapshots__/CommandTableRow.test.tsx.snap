@@ -55,43 +55,44 @@ exports[`CommandTableRow renders correctly a command with shortcut 1`] = `
       <tr
         className="command-row"
       >
-        <td>
+        <td
+          className="command-content"
+        >
           <div
-            className="command-content"
+            className="command-anchor"
             id="cmd-1"
-          >
+          />
+          <span>
             <span>
-              <span>
-                <span
-                  className="command-part-git"
-                >
-                  git
-                </span>
-                 
-                <span
-                  className="command-part-command"
-                  key="0"
-                >
-                  commit
-                </span>
-                 
-                -m
-                message
+              <span
+                className="command-part-git"
+              >
+                git
               </span>
-              <br />
-              <small>
-                <span
-                  className="command-part-command"
-                  key="0"
-                >
-                  gc
-                </span>
-                 
-                -m
-                message
-              </small>
+               
+              <span
+                className="command-part-command"
+                key="0"
+              >
+                commit
+              </span>
+               
+              -m
+              message
             </span>
-          </div>
+            <br />
+            <small>
+              <span
+                className="command-part-command"
+                key="0"
+              >
+                gc
+              </span>
+               
+              -m
+              message
+            </small>
+          </span>
         </td>
         <td>
           <div
@@ -155,29 +156,30 @@ exports[`CommandTableRow renders correctly a command without shortcut 1`] = `
       <tr
         className="command-row"
       >
-        <td>
+        <td
+          className="command-content"
+        >
           <div
-            className="command-content"
+            className="command-anchor"
             id="cmd-1"
-          >
-            <span>
-              <span
-                className="command-part-git"
-              >
-                git
-              </span>
-               
-              <span
-                className="command-part-command"
-                key="0"
-              >
-                commit
-              </span>
-               
-              -m
-              message
+          />
+          <span>
+            <span
+              className="command-part-git"
+            >
+              git
             </span>
-          </div>
+             
+            <span
+              className="command-part-command"
+              key="0"
+            >
+              commit
+            </span>
+             
+            -m
+            message
+          </span>
         </td>
         <td>
           <div

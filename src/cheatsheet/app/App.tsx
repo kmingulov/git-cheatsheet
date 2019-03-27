@@ -2,23 +2,42 @@ import React, { Component, ReactElement } from 'react';
 import { Container } from 'react-bootstrap';
 
 import { AppHeader } from './AppHeader';
+
+import { AboutModal } from './modals';
 import { CommandPage } from './pages';
 
 import './App.css';
+
+type State = Readonly<{ aboutModalShown: boolean }>;
 
 /**
  * Main application component.
  * @inheritdoc
  */
-export class App extends Component {
+export class App extends Component<{}, State> {
+  public state: State = { aboutModalShown: false };
+
+  public shouldComponentUpdate(nextProps: Readonly<{}>, nextState: State): boolean {
+    return this.state.aboutModalShown !== nextState.aboutModalShown;
+  }
+
   public render(): ReactElement {
     return (
-      <div>
-        <AppHeader/>
+      <>
+        <AboutModal shown={ this.state.aboutModalShown } onClose={ this.hideAbout }/>
+        <AppHeader onAbout={ this.showAbout }/>
         <Container className='mainContent'>
           <CommandPage/>
         </Container>
-      </div>
+      </>
     );
+  }
+
+  private showAbout = () => {
+    this.setState({ aboutModalShown: true });
+  }
+
+  private hideAbout = () => {
+    this.setState({ aboutModalShown: false });
   }
 }

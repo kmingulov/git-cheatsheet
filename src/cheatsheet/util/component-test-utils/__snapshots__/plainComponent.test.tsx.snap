@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`plainComponent renders one child 1`] = `
+<SomeComponent>
+  <div />
+</SomeComponent>
+`;
+
+exports[`plainComponent renders two children 1`] = `
+<SomeComponent>
+  <div />
+  <span />
+</SomeComponent>
+`;
