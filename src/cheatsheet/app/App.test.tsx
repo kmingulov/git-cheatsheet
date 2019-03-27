@@ -6,8 +6,16 @@ import { App } from './App';
 import { AppHeader } from './AppHeader';
 import { AboutModal } from './modals';
 
-jest.mock('./AppHeader');
-jest.mock('./modals');
+jest.mock('./AppHeader', () => {
+  const { plainComponent } = require('cheatsheet/util/component-test-utils');
+  return { AppHeader: plainComponent('AppHeader') };
+});
+
+jest.mock('./modals', () => {
+  const { plainComponent } = require('cheatsheet/util/component-test-utils');
+  return { AboutModal: plainComponent('AboutModal') };
+});
+
 jest.mock('./pages');
 
 Enzyme.configure({adapter: new Adapter()});

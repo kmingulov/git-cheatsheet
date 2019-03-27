@@ -1,4 +1,4 @@
-import { Component, ComponentType, ReactNode } from 'react';
+import React, { Component, ComponentType, ReactNode } from 'react';
 
 /**
  * Higher-order component (HOC) simply returning a new component with a given display name which always just renders its
@@ -10,7 +10,11 @@ export function plainComponent<P extends object>(displayName: string): Component
     public static displayName = displayName;
 
     public render(): ReactNode {
-      return this.props.children;
+      return (
+        <>
+          { this.props.children }
+        </>
+      );
     }
   };
 }
