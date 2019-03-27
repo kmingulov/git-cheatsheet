@@ -5,7 +5,7 @@ import React from 'react';
 import { AboutModal } from './AboutModal';
 
 jest.mock('react-bootstrap', () => {
-  const { plainComponent } = require('cheatsheet/util/component-utils');
+  const { plainComponent } = require('cheatsheet/util/component-test-utils');
 
   const Modal = plainComponent('Modal');
   Modal.Header = plainComponent('Modal.Header');
