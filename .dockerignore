@@ -1,0 +1,5 @@
+# Ignore everything...
+**
+
+# ...except for the built application.
+!/build/
