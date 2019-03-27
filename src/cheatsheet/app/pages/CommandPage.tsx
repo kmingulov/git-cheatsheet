@@ -5,7 +5,7 @@ import { MdClear, MdSearch } from 'react-icons/md';
 import commands from 'cheatsheet/command-data/commands';
 import { CommandStore, LunrCommandStore } from 'cheatsheet/command-store';
 import { CommandTable } from 'cheatsheet/command-table';
-import { staticComponent } from 'cheatsheet/util/componentUtils';
+import { staticComponent } from 'cheatsheet/util/component-utils';
 
 const StaticInputGroupPrepend = staticComponent(InputGroup.Prepend);
 const StaticInputGroupAppend = staticComponent(InputGroup.Append);

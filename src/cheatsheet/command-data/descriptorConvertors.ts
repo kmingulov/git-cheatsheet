@@ -1,5 +1,5 @@
 import { Command, CommandGroup } from 'cheatsheet/command';
-import { interleave } from 'cheatsheet/util/arrayUtils';
+import { interleave } from 'cheatsheet/util/array-utils';
 
 import { CommandDescriptor } from './CommandDescriptor';
 import { CommandGroupDescriptor } from './CommandGroupDescriptor';
