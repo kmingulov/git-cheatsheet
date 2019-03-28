@@ -7,6 +7,7 @@ import diffCommands from './data/diff';
 import logCommands from './data/log';
 import pullCommands from './data/pull';
 import remoteCommands from './data/remote';
+import tagCommands from './data/tag';
 
 const groupDescriptors = [
   basicCommands,
@@ -15,6 +16,7 @@ const groupDescriptors = [
   diffCommands,
   logCommands,
   remoteCommands,
+  tagCommands,
   configCommands,
 ];
 
