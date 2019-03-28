@@ -30,6 +30,22 @@ const commitCommands: CommandGroupDescriptor = {
       ],
     },
     {
+      command: [ command('reset'), ref('HEAD'), file('file') ],
+      description: [
+        'Unstage ', file('file'), ' that was added/removed with ', command('add'), ' or ', command('rm'), ' earlier. ',
+        'That is, the file will be moved from the staging area back to the working directory.',
+      ],
+      shortcut: [ command('grs'), ref('HEAD'), file('file') ],
+    },
+    {
+      command: [ command('checkout'), '--', file('file') ],
+      description: [
+        'Discard changes made to ', file('file'), ' in the working directory. The file will be replaced by its ' +
+        'version in the staging area or at ', ref('HEAD'), '.',
+      ],
+      shortcut: [ command('gco'), '--', file('file') ],
+    },
+    {
       command: [ command('commit') ],
       description: [
         'Commit all changes in the staging area. A commit message will be provided via the configured text editor.',
