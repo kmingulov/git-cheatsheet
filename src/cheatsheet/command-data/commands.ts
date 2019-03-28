@@ -5,11 +5,13 @@ import commitCommands from './data/commit';
 import configCommands from './data/config';
 import diffCommands from './data/diff';
 import logCommands from './data/log';
+import pullCommands from './data/pull';
 import remoteCommands from './data/remote';
 
 const groupDescriptors = [
   basicCommands,
   commitCommands,
+  pullCommands,
   diffCommands,
   logCommands,
   remoteCommands,
