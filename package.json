@@ -42,7 +42,9 @@
     "lint": "tslint 'src/**/*.{ts,tsx}'",
     "doc": "typedoc --options typedoc.js --json docs/tsdoc.json",
     "all": "npm-run-all coverage lint build",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "docker-build": "docker build -t kmingulov/git-cheatsheet:latest .",
+    "docker-push": "docker push kmingulov/git-cheatsheet:latest"
   },
   "browserslist": [
     ">0.2%",
