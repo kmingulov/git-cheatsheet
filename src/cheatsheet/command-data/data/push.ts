@@ -8,9 +8,9 @@ const pushCommands: CommandGroupDescriptor = {
 
   commands: [
     {
-      command: [ command('push'), remote('remote'), ref('tag') ],
-      description: [ 'Push ', ref('tag'), ' to ', remote('remote'), '.' ],
-      shortcut: [ command('gps'), remote('remote'), ref('tag') ],
+      command: [ command('push'), remote('remote'), ref('branch'), '/', ref('tag') ],
+      description: [ 'Push ', ref('branch'), ' or ', ref('tag'), ' to ', remote('remote'), '.' ],
+      shortcut: [ command('gps'), remote('remote'), ref('branch'), '/', ref('tag') ],
     },
     {
       command: [ command('push'), remote('remote'), '--tags' ],
