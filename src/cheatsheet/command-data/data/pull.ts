@@ -17,6 +17,22 @@ const pullCommands: CommandGroupDescriptor = {
       ],
       shortcut: [ command('gf'), remote('[remote]') ],
     },
+    {
+      command: [ command('pull') ],
+      description: [
+        'Fetch data from the default remote repository and merge changes in your current branch with changes in the ' +
+        'remote branch.',
+      ],
+      shortcut: [ command('gpl') ],
+    },
+    {
+      command: [ command('pull'), '--rebase' ],
+      description: [
+        'Fetch data from the default remote repository and rebase changes in your current branch on top of the last ' +
+        'commit in the remote branch.',
+      ],
+      shortcut: [ command('gplr') ],
+    },
   ],
 };
 

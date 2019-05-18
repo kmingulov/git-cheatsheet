@@ -53,6 +53,13 @@ const commitCommands: CommandGroupDescriptor = {
       shortcut: [ command('gc') ],
     },
     {
+      command: [ command('commit'), '-a' ],
+      description: [
+        'Commit all tracked changed files which weren\'t even added to the staging area.',
+      ],
+      shortcut: [ command('gca') ],
+    },
+    {
       command: [ command('commit'), '-m', str('"Commit message"') ],
       description: [ 'Commit all changes in the staging area with the given commit message.' ],
       shortcut: [ command('gc'), '-m', '"Commit message"' ],
@@ -61,8 +68,16 @@ const commitCommands: CommandGroupDescriptor = {
       command: [ command('commit'), '--amend' ],
       description: [
         'Change the last commit (i.e. one to which ', ref('HEAD'), ' points) by adding changes from the staging area ' +
-        'and/or changing its message.' ],
+        'and/or changing its message.',
+      ],
       shortcut: [ command('gcm') ],
+    },
+    {
+      command: [ command('cherry-pick'), ref('commit') ],
+      description: [
+        'Pick ', ref('commit'), ' and re-apply it on top of the current branch.',
+      ],
+      shortcut: [ command('gcp'), ref('commit') ],
     },
   ],
 };

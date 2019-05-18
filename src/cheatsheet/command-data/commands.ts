@@ -9,6 +9,7 @@ import logCommands from './data/log';
 import mergeCommands from './data/merge';
 import pullCommands from './data/pull';
 import pushCommands from './data/push';
+import rebaseCommands from './data/rebase';
 import remoteCommands from './data/remote';
 import tagCommands from './data/tag';
 
@@ -21,6 +22,7 @@ const groupDescriptors = [
   diffCommands,
   logCommands,
   branchCommands,
+  rebaseCommands,
   remoteCommands,
   tagCommands,
   configCommands,

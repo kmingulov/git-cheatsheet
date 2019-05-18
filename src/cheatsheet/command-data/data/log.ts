@@ -1,4 +1,4 @@
-import { command, str } from 'cheatsheet/command';
+import { command, ref, str } from 'cheatsheet/command';
 
 import { CommandGroupDescriptor } from '../CommandGroupDescriptor';
 
@@ -84,6 +84,27 @@ const logCommands: CommandGroupDescriptor = {
       command: [ command('log'), '--no-merges' ],
       description: [ 'Do not show merge commits.' ],
       shortcut: [ command('gl'), '--no-merges' ],
+    },
+    {
+      command: [ command('log'), 'branch..other-branch' ],
+      description: [ 'Show commits from ', ref('other-branch'), ' which aren\'t present in ', ref('branch'), '.' ],
+      shortcut: [ command('gl'), 'branch..other-branch' ],
+    },
+    {
+      command: [ command('log'), ref('branchA'), ref('branchB'), '...', '--not', ref('branch') ],
+      description: [
+        'Show all commits from ', ref('branchA'), ', ', ref('branchB'), ', ...', ' which aren\'t present in ', 
+        ref('branch'), '.',
+      ],
+      shortcut: [ command('gl'), ref('branchA'), ref('branchB'), '...', '--not', ref('branch') ],
+    },
+    {
+      command: [ command('log'), 'branch...other-branch' ],
+      description: [
+        'Show commits either from ', ref('branch'), ' or ', ref('other-branch'), ', but not from both. You can add ' +
+        'option --left-right to see which branch (left or right) each commit comes from.',
+      ],
+      shortcut: [ command('gl'), 'branch...other-branch' ],
     },
   ],
 };
