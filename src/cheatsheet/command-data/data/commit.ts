@@ -30,11 +30,34 @@ const commitCommands: CommandGroupDescriptor = {
       ],
     },
     {
+      command: [ command('reset'), ref('HEAD'), file('file') ],
+      description: [
+        'Unstage ', file('file'), ' that was added/removed with ', command('add'), ' or ', command('rm'), ' earlier. ',
+        'That is, the file will be moved from the staging area back to the working directory.',
+      ],
+      shortcut: [ command('grs'), ref('HEAD'), file('file') ],
+    },
+    {
+      command: [ command('checkout'), '--', file('file') ],
+      description: [
+        'Discard changes made to ', file('file'), ' in the working directory. The file will be replaced by its ' +
+        'version in the staging area or at ', ref('HEAD'), '.',
+      ],
+      shortcut: [ command('gco'), '--', file('file') ],
+    },
+    {
       command: [ command('commit') ],
       description: [
         'Commit all changes in the staging area. A commit message will be provided via the configured text editor.',
       ],
       shortcut: [ command('gc') ],
+    },
+    {
+      command: [ command('commit'), '-a' ],
+      description: [
+        'Commit all tracked changed files which weren\'t even added to the staging area.',
+      ],
+      shortcut: [ command('gca') ],
     },
     {
       command: [ command('commit'), '-m', str('"Commit message"') ],
@@ -45,8 +68,16 @@ const commitCommands: CommandGroupDescriptor = {
       command: [ command('commit'), '--amend' ],
       description: [
         'Change the last commit (i.e. one to which ', ref('HEAD'), ' points) by adding changes from the staging area ' +
-        'and/or changing its message.' ],
+        'and/or changing its message.',
+      ],
       shortcut: [ command('gcm') ],
+    },
+    {
+      command: [ command('cherry-pick'), ref('commit') ],
+      description: [
+        'Pick ', ref('commit'), ' and re-apply it on top of the current branch.',
+      ],
+      shortcut: [ command('gcp'), ref('commit') ],
     },
   ],
 };
