@@ -10,9 +10,10 @@ const pullCommands: CommandGroupDescriptor = {
     {
       command: [ command('fetch'), remote('[remote]') ],
       description: [
-        'Fetch data from the repote repository ', remote('remote'), ': all objects and refs (like branch names ' +
-        'and tags). Remote changes aren\'t integrated with your own changes (for that use ', command('pull'), ' or ',
-        command('merge'), '). If remote is omitted, ', remote('origin'), ' is used.',
+        'Fetch data from the remote repository ', remote('remote'), ': all objects and refs (like branch names ' +
+        'and tags). Remote changes aren\'t integrated with your own changes and your working directory isn\'t ' +
+        'affected (to merge remote changes with our own, use ', command('pull'), ' or ', command('merge'), '). If ',
+        remote('remote'), ' is omitted, ', remote('origin'), ' is used.',
       ],
       shortcut: [ command('gf'), remote('[remote]') ],
     },
